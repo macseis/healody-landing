@@ -1,0 +1,146 @@
+# Healody™ - Git Ignore File
+
+# ============================================
+# Environment & Config Files
+# ============================================
+.env
+.env.local
+.env.production
+backend/.env
+backend/.env.*
+backend/config/.env
+
+# ============================================
+# Logs
+# ============================================
+*.log
+logs/
+*.log.*
+backend/logs/
+frontend/logs/
+
+# ============================================
+# Temporary Files
+# ============================================
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ============================================
+# Backup Files
+# ============================================
+*.bak
+*.backup
+*.old
+_backup*/
+
+# ============================================
+# Database Dumps
+# ============================================
+*.sql
+*.sql.gz
+*.sql.zip
+database/backups/
+
+# ============================================
+# Node Modules & Dependencies
+# ============================================
+node_modules/
+vendor/
+bower_components/
+
+# ============================================
+# IDE & Editor Files
+# ============================================
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.phpintel/
+.php_cs.cache
+
+# ============================================
+# OS Files
+# ============================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ============================================
+# Build & Dist Files
+# ============================================
+dist/
+build/
+*.map
+
+# ============================================
+# Test Files (if any)
+# ============================================
+phpunit.xml
+.phpunit.result.cache
+
+# ============================================
+# Sensitive Data
+# ============================================
+*.pem
+*.key
+*.crt
+*.p12
+credentials.json
+secrets.json
+
+# ============================================
+# Cache
+# ============================================
+cache/
+*.cache
+.cache/
+
+# ============================================
+# Documentation Files (Healody - Production)
+# ============================================
+*.md
+README.md
+!.github/*.md
+
+# ============================================
+# Development & Test Directories
+# ============================================
+_VARIE/
+frontend - backup/
+_backup_test_files/
+_obsolete_files_backup/
+frontend/_obsolete_files_backup/
+
+# ============================================
+# Database Files & Schema
+# ============================================
+database/
+
+# ============================================
+# Audio & Protocol Data Files
+# ============================================
+*.dat
+backend/hpx-pdata/
+frontend/assets/audio/*.dat
+backend/assets/audio/*.dat
+
+# ============================================
+# Claude Code Local Settings
+# ============================================
+.claude/
+
+# ============================================
+# Documentation Directories
+# ============================================
+docs/
+md.files/
+audioGenerator/

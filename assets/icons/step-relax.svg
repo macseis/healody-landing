@@ -1,0 +1,61 @@
+<!-- Step Icon: Rilassati -->
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="relaxGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3399ff;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#9966ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#66b2ff;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Silhouette persona seduta -->
+  <g>
+    <!-- Corpo -->
+    <ellipse cx="150" cy="160" rx="35" ry="55" fill="url(#relaxGradient)" opacity="0.7"/>
+
+    <!-- Testa -->
+    <circle cx="150" cy="100" r="25" fill="url(#relaxGradient)" opacity="0.7"/>
+
+    <!-- Gambe -->
+    <ellipse cx="135" cy="210" rx="12" ry="30" fill="url(#relaxGradient)" opacity="0.7"/>
+    <ellipse cx="165" cy="210" rx="12" ry="30" fill="url(#relaxGradient)" opacity="0.7"/>
+
+    <!-- Braccia rilassate -->
+    <ellipse cx="120" cy="170" rx="10" ry="35" fill="url(#relaxGradient)" opacity="0.7" transform="rotate(-20 120 170)"/>
+    <ellipse cx="180" cy="170" rx="10" ry="35" fill="url(#relaxGradient)" opacity="0.7" transform="rotate(20 180 170)"/>
+  </g>
+
+  <!-- Cuffie sulla testa -->
+  <g>
+    <path d="M125 95 Q125 75, 150 75 Q175 75, 175 95"
+          stroke="url(#relaxGradient)" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <circle cx="125" cy="100" r="10" fill="url(#relaxGradient)"/>
+    <circle cx="175" cy="100" r="10" fill="url(#relaxGradient)"/>
+  </g>
+
+  <!-- Onde sonore che circondano -->
+  <g opacity="0.5">
+    <!-- Sinistra -->
+    <path d="M90 140 Q80 150, 90 160" stroke="url(#relaxGradient)" stroke-width="3" fill="none">
+      <animate attributeName="opacity" values="0.3;0.7;0.3" dur="3s" repeatCount="indefinite"/>
+    </path>
+    <path d="M75 140 Q60 150, 75 160" stroke="url(#relaxGradient)" stroke-width="2" fill="none">
+      <animate attributeName="opacity" values="0.2;0.5;0.2" dur="3s" begin="0.5s" repeatCount="indefinite"/>
+    </path>
+
+    <!-- Destra -->
+    <path d="M210 140 Q220 150, 210 160" stroke="url(#relaxGradient)" stroke-width="3" fill="none">
+      <animate attributeName="opacity" values="0.3;0.7;0.3" dur="3s" repeatCount="indefinite"/>
+    </path>
+    <path d="M225 140 Q240 150, 225 160" stroke="url(#relaxGradient)" stroke-width="2" fill="none">
+      <animate attributeName="opacity" values="0.2;0.5;0.2" dur="3s" begin="0.5s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- Aura di benessere -->
+  <ellipse cx="150" cy="150" rx="90" ry="110" fill="none" stroke="url(#relaxGradient)" stroke-width="2" opacity="0.2">
+    <animate attributeName="rx" values="90;100;90" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="ry" values="110;120;110" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.2;0.4;0.2" dur="4s" repeatCount="indefinite"/>
+  </ellipse>
+</svg>

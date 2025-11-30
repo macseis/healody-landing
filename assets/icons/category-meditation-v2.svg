@@ -1,0 +1,52 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Icona Meditazione e Focus - versione con più contrasto -->
+  <defs>
+    <linearGradient id="meditationGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9966ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#cc66ff;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Persona in meditazione - silhouette semplificata -->
+  <g fill="url(#meditationGradient)" stroke="#6633cc" stroke-width="4">
+    <!-- Testa -->
+    <circle cx="100" cy="60" r="25"/>
+
+    <!-- Corpo e gambe incrociate -->
+    <path d="M 100 85 L 100 115 M 70 115 Q 85 105, 100 115 Q 115 105, 130 115"
+          stroke-width="6"
+          stroke-linecap="round"
+          fill="none"/>
+
+    <!-- Braccia in posizione meditativa -->
+    <path d="M 100 100 L 75 110 L 70 120"
+          stroke-width="6"
+          stroke-linecap="round"
+          fill="none"/>
+    <path d="M 100 100 L 125 110 L 130 120"
+          stroke-width="6"
+          stroke-linecap="round"
+          fill="none"/>
+  </g>
+
+  <!-- Aura/Chakra - cerchi concentrici più visibili -->
+  <g opacity="0.7">
+    <circle cx="100" cy="60" r="40"
+            fill="none"
+            stroke="#9966ff"
+            stroke-width="3"/>
+    <circle cx="100" cy="60" r="55"
+            fill="none"
+            stroke="#cc66ff"
+            stroke-width="2"
+            opacity="0.5"/>
+  </g>
+
+  <!-- Particelle di energia -->
+  <g fill="#cc66ff" opacity="0.8">
+    <circle cx="60" cy="50" r="3"/>
+    <circle cx="140" cy="50" r="3"/>
+    <circle cx="70" cy="80" r="2.5"/>
+    <circle cx="130" cy="80" r="2.5"/>
+  </g>
+</svg>

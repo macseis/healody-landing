@@ -1,0 +1,43 @@
+<!-- Step Icon: Scegli la Frequenza -->
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="chooseGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3399ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#66b2ff;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="chooseGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9966ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#cc99ff;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Griglia 2x2 di card -->
+  <g>
+    <!-- Card 1 (top-left) -->
+    <rect x="80" y="80" width="70" height="70" rx="8" fill="#f0f9ff" stroke="#3399ff" stroke-width="2"/>
+    <circle cx="115" cy="115" r="15" fill="url(#chooseGradient1)" opacity="0.3"/>
+
+    <!-- Card 2 (top-right) -->
+    <rect x="170" y="80" width="70" height="70" rx="8" fill="#f0f9ff" stroke="#9966ff" stroke-width="2"/>
+    <path d="M195 105 L215 105 L205 120 Z" fill="url(#chooseGradient2)" opacity="0.3"/>
+
+    <!-- Card 3 (bottom-left) -->
+    <rect x="80" y="170" width="70" height="70" rx="8" fill="#f0f9ff" stroke="#33ccaa" stroke-width="2"/>
+    <rect x="100" y="190" width="30" height="30" rx="4" fill="#33ccaa" opacity="0.3"/>
+
+    <!-- Card 4 (bottom-right) - SELEZIONATA -->
+    <rect x="170" y="170" width="70" height="70" rx="8"
+          fill="url(#chooseGradient1)" stroke="#3399ff" stroke-width="4">
+      <animate attributeName="stroke-width" values="4;6;4" dur="2s" repeatCount="indefinite"/>
+    </rect>
+    <circle cx="205" cy="205" r="12" fill="white"/>
+    <polyline points="198,205 203,210 212,198" stroke="#3399ff"
+              stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Mano/dito che tocca -->
+  <g transform="translate(205, 235)">
+    <ellipse cx="0" cy="0" rx="15" ry="20" fill="#FFD700" opacity="0.7"/>
+    <circle cx="0" cy="-25" r="8" fill="#FFD700"/>
+  </g>
+</svg>

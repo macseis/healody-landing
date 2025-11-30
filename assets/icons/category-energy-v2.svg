@@ -1,0 +1,39 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Icona Energia e Vitalità - versione con più contrasto -->
+  <defs>
+    <linearGradient id="energyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff9933;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffcc33;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Sole stilizzato - più grande e definito -->
+  <circle cx="100" cy="100" r="35"
+          fill="url(#energyGradient)"
+          stroke="#cc7700"
+          stroke-width="4"/>
+
+  <!-- Raggi solari - più spessi e visibili -->
+  <g stroke="#ff9933" stroke-width="6" stroke-linecap="round">
+    <line x1="100" y1="40" x2="100" y2="20"/>
+    <line x1="142" y1="58" x2="156" y2="44"/>
+    <line x1="160" y1="100" x2="180" y2="100"/>
+    <line x1="142" y1="142" x2="156" y2="156"/>
+    <line x1="100" y1="160" x2="100" y2="180"/>
+    <line x1="58" y1="142" x2="44" y2="156"/>
+    <line x1="40" y1="100" x2="20" y2="100"/>
+    <line x1="58" y1="58" x2="44" y2="44"/>
+  </g>
+
+  <!-- Onde energetiche - più marcate -->
+  <g stroke="#ffcc33" stroke-width="4" fill="none" opacity="0.8">
+    <path d="M 30 100 Q 45 85, 60 100 T 90 100 T 120 100 T 150 100 T 170 100">
+      <animate attributeName="d"
+               values="M 30 100 Q 45 85, 60 100 T 90 100 T 120 100 T 150 100 T 170 100;
+                       M 30 100 Q 45 115, 60 100 T 90 100 T 120 100 T 150 100 T 170 100;
+                       M 30 100 Q 45 85, 60 100 T 90 100 T 120 100 T 150 100 T 170 100"
+               dur="2s"
+               repeatCount="indefinite"/>
+    </path>
+  </g>
+</svg>

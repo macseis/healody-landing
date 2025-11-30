@@ -1,0 +1,61 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Icona Rigenerazione Fisica e Salute -->
+  <defs>
+    <linearGradient id="regenGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#33cc99;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#33ff99;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Cuore stilizzato - simbolo di salute -->
+  <path d="M 100 150 L 60 110 Q 50 100, 50 85 Q 50 65, 70 65 Q 85 65, 100 80 Q 115 65, 130 65 Q 150 65, 150 85 Q 150 100, 140 110 Z"
+        fill="url(#regenGradient)"
+        stroke="#229966"
+        stroke-width="4"/>
+
+  <!-- Croce medica al centro -->
+  <g fill="#ffffff" stroke="#229966" stroke-width="2">
+    <rect x="95" y="85" width="10" height="30" rx="2"/>
+    <rect x="85" y="95" width="30" height="10" rx="2"/>
+  </g>
+
+  <!-- Onde di rigenerazione circolari -->
+  <g stroke="#33cc99" stroke-width="3" fill="none">
+    <circle cx="100" cy="100" r="65" opacity="0.6">
+      <animate attributeName="r"
+               values="65;75;65"
+               dur="2s"
+               repeatCount="indefinite"/>
+      <animate attributeName="opacity"
+               values="0.6;0.2;0.6"
+               dur="2s"
+               repeatCount="indefinite"/>
+    </circle>
+    <circle cx="100" cy="100" r="80" opacity="0.4">
+      <animate attributeName="r"
+               values="80;90;80"
+               dur="2.5s"
+               repeatCount="indefinite"/>
+      <animate attributeName="opacity"
+               values="0.4;0.1;0.4"
+               dur="2.5s"
+               repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Particelle di guarigione -->
+  <g fill="#33ff99" opacity="0.8">
+    <circle cx="70" cy="70" r="3">
+      <animate attributeName="cy" values="70;60;70" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="130" cy="70" r="3">
+      <animate attributeName="cy" values="70;60;70" dur="1.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="60" cy="110" r="2.5">
+      <animate attributeName="cx" values="60;55;60" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="140" cy="110" r="2.5">
+      <animate attributeName="cx" values="140;145;140" dur="2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>

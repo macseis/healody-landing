@@ -1,0 +1,30 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- PWA Icon 512x512 -->
+  <defs>
+    <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3399ff;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#66b2ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#99ccff;stop-opacity:1" />
+    </linearGradient>
+    <mask id="waveMask">
+      <circle cx="256" cy="256" r="180" fill="white"/>
+      <path d="M 37 263 A 110 110 0 0 1 257 263"
+            fill="none"
+            stroke="black"
+            stroke-width="80"
+            stroke-linecap="round"/>
+      <path d="M 255 249 A 110 110 0 0 0 475 249"
+            fill="none"
+            stroke="black"
+            stroke-width="80"
+            stroke-linecap="round"/>
+    </mask>
+  </defs>
+
+  <g>
+    <circle cx="256" cy="256" r="240" fill="none" stroke="url(#waveGradient)" stroke-width="28" opacity="0.85"/>
+    <g transform="rotate(-20 256 256)">
+      <circle cx="256" cy="256" r="180" fill="url(#waveGradient)" opacity="0.95" mask="url(#waveMask)"/>
+    </g>
+  </g>
+</svg>

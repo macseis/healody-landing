@@ -1,0 +1,44 @@
+<!-- Category Icon: Energia e Vitalità -->
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="energyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff9933;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffcc33;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Sole stilizzato con cerchi concentrici -->
+  <circle cx="40" cy="40" r="20" fill="url(#energyGradient)" opacity="0.3">
+    <animate attributeName="r" values="20;25;20" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.3;0.1;0.3" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="40" cy="40" r="15" fill="url(#energyGradient)" opacity="0.6">
+    <animate attributeName="r" values="15;18;15" dur="2s" begin="0.3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="40" cy="40" r="10" fill="url(#energyGradient)"/>
+
+  <!-- Raggi energetici -->
+  <g stroke="url(#energyGradient)" stroke-width="3" stroke-linecap="round">
+    <line x1="40" y1="10" x2="40" y2="18" opacity="0.8"/>
+    <line x1="40" y1="62" x2="40" y2="70" opacity="0.8"/>
+    <line x1="10" y1="40" x2="18" y2="40" opacity="0.8"/>
+    <line x1="62" y1="40" x2="70" y2="40" opacity="0.8"/>
+
+    <line x1="18" y1="18" x2="24" y2="24" opacity="0.6"/>
+    <line x1="56" y1="56" x2="62" y2="62" opacity="0.6"/>
+    <line x1="62" y1="18" x2="56" y2="24" opacity="0.6"/>
+    <line x1="24" y1="56" x2="18" y2="62" opacity="0.6"/>
+  </g>
+
+  <!-- Onde dinamiche -->
+  <path d="M15 35 Q20 30, 25 35" stroke="url(#energyGradient)"
+        stroke-width="2" fill="none" opacity="0.4" stroke-linecap="round">
+    <animate attributeName="d" values="M15 35 Q20 30, 25 35;M15 35 Q20 38, 25 35;M15 35 Q20 30, 25 35"
+             dur="1.5s" repeatCount="indefinite"/>
+  </path>
+  <path d="M55 45 Q60 50, 65 45" stroke="url(#energyGradient)"
+        stroke-width="2" fill="none" opacity="0.4" stroke-linecap="round">
+    <animate attributeName="d" values="M55 45 Q60 50, 65 45;M55 45 Q60 42, 65 45;M55 45 Q60 50, 65 45"
+             dur="1.5s" repeatCount="indefinite"/>
+  </path>
+</svg>

@@ -1,0 +1,23 @@
+<!-- Feature Icon: Semplicità Totale -->
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="simpleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3399ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#66b2ff;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Gesture tap circles (3 cerchi concentrici) -->
+  <circle cx="100" cy="100" r="15" fill="url(#simpleGradient)" opacity="0.3">
+    <animate attributeName="r" from="15" to="45" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" from="0.3" to="0" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="100" cy="100" r="20" fill="url(#simpleGradient)" opacity="0.2">
+    <animate attributeName="r" from="20" to="50" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" from="0.2" to="0" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Play button centrale -->
+  <circle cx="100" cy="100" r="35" fill="url(#simpleGradient)"/>
+  <polygon points="92,85 92,115 118,100" fill="white"/>
+</svg>

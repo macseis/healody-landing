@@ -1,0 +1,65 @@
+<!-- Brain Waves Graphic - Sezione Scienza -->
+<svg width="800" height="300" viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="betaGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ff4444;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#ff6666;stop-opacity:0.8" />
+    </linearGradient>
+    <linearGradient id="alphaGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ff9933;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#ffbb66;stop-opacity:0.8" />
+    </linearGradient>
+    <linearGradient id="thetaGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3399ff;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#66b2ff;stop-opacity:0.8" />
+    </linearGradient>
+    <linearGradient id="deltaGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#9966ff;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#cc99ff;stop-opacity:0.8" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="300" fill="#f8f9fa" rx="12"/>
+
+  <!-- Beta Wave (13-30 Hz) - onde rapide, piccole -->
+  <g transform="translate(0, 50)">
+    <text x="10" y="0" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ff4444">Beta (13-30 Hz)</text>
+    <text x="180" y="0" font-family="Arial, sans-serif" font-size="14" fill="#666">Stato di veglia e attenzione</text>
+    <path d="M10 20 Q15 10, 20 20 T30 20 T40 20 T50 20 T60 20 T70 20 T80 20 T90 20 T100 20 T110 20 T120 20 T130 20 T140 20 T150 20 T160 20 T170 20 T180 20 T190 20 T200 20 T210 20 T220 20 T230 20 T240 20 T250 20 T260 20 T270 20 T280 20 T290 20 T300 20"
+          stroke="url(#betaGradient)" stroke-width="3" fill="none"/>
+  </g>
+
+  <!-- Alpha Wave (8-13 Hz) - onde medie -->
+  <g transform="translate(0, 120)">
+    <text x="10" y="0" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ff9933">Alpha (8-13 Hz)</text>
+    <text x="180" y="0" font-family="Arial, sans-serif" font-size="14" fill="#666">Rilassamento cosciente</text>
+    <path d="M10 20 Q20 10, 30 20 T50 20 T70 20 T90 20 T110 20 T130 20 T150 20 T170 20 T190 20 T210 20 T230 20 T250 20 T270 20 T290 20 T310 20"
+          stroke="url(#alphaGradient)" stroke-width="3" fill="none"/>
+  </g>
+
+  <!-- Theta Wave (4-8 Hz) - onde lente, ampie -->
+  <g transform="translate(0, 190)">
+    <text x="10" y="0" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#3399ff">Theta (4-8 Hz)</text>
+    <text x="180" y="0" font-family="Arial, sans-serif" font-size="14" fill="#666">Meditazione profonda, creatività</text>
+    <path d="M10 20 Q30 5, 50 20 T90 20 T130 20 T170 20 T210 20 T250 20 T290 20"
+          stroke="url(#thetaGradient)" stroke-width="3" fill="none"/>
+  </g>
+
+  <!-- Delta Wave (0.5-4 Hz) - onde molto lente -->
+  <g transform="translate(0, 260)">
+    <text x="10" y="0" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#9966ff">Delta (0.5-4 Hz)</text>
+    <text x="180" y="0" font-family="Arial, sans-serif" font-size="14" fill="#666">Sonno profondo, rigenerazione</text>
+    <path d="M10 20 Q50 5, 90 20 T170 20 T250 20 T330 20"
+          stroke="url(#deltaGradient)" stroke-width="3" fill="none"/>
+  </g>
+
+  <!-- Grid lines (optional) -->
+  <g stroke="#e0e0e0" stroke-width="1" opacity="0.3">
+    <line x1="300" y1="0" x2="300" y2="300"/>
+    <line x1="400" y1="0" x2="400" y2="300"/>
+    <line x1="500" y1="0" x2="500" y2="300"/>
+    <line x1="600" y1="0" x2="600" y2="300"/>
+    <line x1="700" y1="0" x2="700" y2="300"/>
+  </g>
+</svg>
