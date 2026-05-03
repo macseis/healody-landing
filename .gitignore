@@ -111,6 +111,7 @@ cache/
 README.md
 !.github/*.md
 !PROJECT_CONTEXT.md
+!CLAUDE.md
 
 # ============================================
 # Development & Test Directories
