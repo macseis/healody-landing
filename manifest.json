@@ -1,10 +1,10 @@
 {
-  "name": "Healody™ - Il Tuo Angolo di Benessere",
+  "name": "Healody™ — Pack audio terapeutici",
   "short_name": "Healody™",
-  "description": "Ritrova il tuo equilibrio con le frequenze terapeutiche. Audio scientificamente studiati per ridurre stress, migliorare focus e favorire rilassamento profondo.",
+  "description": "Pack audio standalone con frequenze binaurali e polinaurali per sonno, focus, calma ed energia. App PWA in arrivo.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0a0a1a",
+  "background_color": "#FAFAFA",
   "theme_color": "#3399ff",
   "orientation": "portrait-primary",
   "scope": "/",
@@ -13,22 +13,34 @@
       "src": "images/favicon.svg",
       "sizes": "any",
       "type": "image/svg+xml",
-      "purpose": "any maskable"
+      "purpose": "any"
     },
     {
-      "src": "images/icon-192.png",
+      "src": "images/android-chrome-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
     },
     {
-      "src": "images/icon-512.png",
+      "src": "images/android-chrome-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
+    },
+    {
+      "src": "images/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "images/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ],
-  "categories": ["health", "wellness", "lifestyle"],
+  "categories": ["health", "wellness", "lifestyle", "music"],
   "lang": "it",
   "dir": "ltr",
   "prefer_related_applications": false

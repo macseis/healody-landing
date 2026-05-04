@@ -3,30 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Healody™ - Il tuo angolo di benessere. Frequenze terapeutiche per ridurre stress, migliorare focus e favorire rilassamento profondo.">
-    <meta name="keywords" content="frequenze terapeutiche, benessere, meditazione, relax, stress, binaurali">
-    <meta name="author" content="Healody™">
 
-    <!-- Open Graph / Social Media -->
+    <!-- Primary SEO -->
+    <title>Healody™ — Pack audio terapeutici e App in arrivo</title>
+    <meta name="description" content="Healody™: Pack audio standalone con frequenze binaurali e polinaurali per sonno, focus, calma ed energia. App PWA in arrivo. Un prodotto Protocollo Salute™.">
+    <meta name="keywords" content="frequenze terapeutiche, pack audio, binaurali, polinaurali, benessere, sonno, focus, meditazione, ambient, mp3, healody">
+    <meta name="author" content="Protocollo Salute™">
+    <meta name="theme-color" content="#3399ff">
+    <meta name="robots" content="index, follow">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://healody.com/">
+
+    <!-- Multi-lingua (hreflang) -->
+    <link rel="alternate" hreflang="it" href="https://healody.com/">
+    <link rel="alternate" hreflang="en" href="https://healody.com/?lang=en">
+    <link rel="alternate" hreflang="x-default" href="https://healody.com/">
+
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://Healody.net/">
-    <meta property="og:title" content="Healody™ - Benessere attraverso il suono">
-    <meta property="og:description" content="Trova il tuo angolo di benessere con frequenze terapeutiche scientificamente studiate.">
-    <meta property="og:image" content="https://Healody.net/images/og-image.jpg">
+    <meta property="og:site_name" content="Healody™">
+    <meta property="og:url" content="https://healody.com/">
+    <meta property="og:title" content="Healody™ — Pack audio terapeutici e App in arrivo">
+    <meta property="og:description" content="Pack audio standalone con frequenze binaurali e polinaurali per sonno, focus, calma ed energia. App PWA in arrivo.">
+    <meta property="og:image" content="https://healody.com/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Healody™ — Frequenze terapeutiche">
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:locale:alternate" content="en_US">
 
-    <!-- Favicon -->
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Healody™ — Pack audio terapeutici e App in arrivo">
+    <meta name="twitter:description" content="Pack audio standalone con frequenze binaurali e polinaurali. App PWA in arrivo.">
+    <meta name="twitter:image" content="https://healody.com/images/og-image.jpg">
+    <meta name="twitter:image:alt" content="Healody™ — Frequenze terapeutiche">
+
+    <!-- Favicon set -->
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="images/android-chrome-512x512.png">
+    <link rel="mask-icon" href="images/favicon.svg" color="#3399ff">
 
-    <!-- PWA Manifest -->
+    <!-- PWA Manifest (landing has its own manifest) -->
     <link rel="manifest" href="manifest.json">
 
     <!-- iOS PWA Support -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="Healody">
-    <link rel="apple-touch-icon" href="images/icon-192.png">
 
-    <title>Healody™ - Il Tuo Angolo di Benessere</title>
+    <!-- JSON-LD: Organization + WebSite -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Organization",
+                "@id": "https://healody.com/#organization",
+                "name": "Healody™",
+                "alternateName": "Healody",
+                "url": "https://healody.com/",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://healody.com/images/logo-full-300.png",
+                    "width": 300,
+                    "height": 90
+                },
+                "description": "Healody™ — Pack audio standalone e App PWA con frequenze terapeutiche binaurali e polinaurali. Un prodotto di Protocollo Salute™.",
+                "parentOrganization": {
+                    "@type": "Organization",
+                    "name": "Protocollo Salute™"
+                },
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "email": "protocollosalute.it@gmail.com",
+                    "contactType": "customer support",
+                    "availableLanguage": ["Italian", "English"]
+                }
+            },
+            {
+                "@type": "WebSite",
+                "@id": "https://healody.com/#website",
+                "url": "https://healody.com/",
+                "name": "Healody™",
+                "description": "Frequenze terapeutiche per il benessere quotidiano",
+                "publisher": { "@id": "https://healody.com/#organization" },
+                "inLanguage": ["it-IT", "en-US"]
+            }
+        ]
+    }
+    </script>
 
     <!-- Preload critical resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -53,7 +124,8 @@
 
                 <!-- Desktop Menu -->
                 <ul class="navbar-menu" id="navbarMenu">
-                    <li><a href="#come-funziona" class="nav-link" data-i18n="nav.howItWorks">Come Funziona</a></li>
+                    <li><a href="#pack" class="nav-link" data-i18n="nav.pack">Pack</a></li>
+                    <li><a href="#pwa" class="nav-link" data-i18n="nav.pwa">App</a></li>
                     <li><a href="#scienza" class="nav-link" data-i18n="nav.science">Scienza</a></li>
                     <li><a href="#faq" class="nav-link" data-i18n="nav.faq">FAQ</a></li>
                 </ul>
@@ -87,33 +159,31 @@
     <section class="hero" id="hero">
         <div class="hero-background">
             <div class="hero-gradient"></div>
-            <!-- Hero image will be added via CSS background -->
         </div>
 
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
+                    <span class="hero-badge" data-i18n="hero.badge">Due modi per ritrovare il benessere</span>
                     <h1 class="hero-headline" data-i18n="hero.headline">
-                        Ritrova il tuo equilibrio con le frequenze terapeutiche
+                        Frequenze terapeutiche, in due forme
                     </h1>
                     <p class="hero-subheadline" data-i18n="hero.subheadline">
-                        Healody™ trasforma il tuo smartphone in uno strumento di benessere personale.
-                        Audio terapeutici scientificamente studiati per ridurre stress, migliorare
-                        il focus e favorire il rilassamento profondo.
+                        Scarica i nostri Pack audio standalone in alta qualità e usali subito sul tuo dispositivo.
+                        Oppure aspetta l'arrivo della PWA Healody™ per l'esperienza completa.
                     </p>
 
                     <div class="hero-cta">
-                        <button class="btn btn-primary btn-large" id="ctaInstallHero" data-i18n="hero.ctaPrimary">
-                            Installa l'App Gratis
-                        </button>
-                        <a href="#problema" class="btn btn-secondary btn-large" data-i18n="hero.ctaSecondary">
-                            Scopri come funziona ↓
+                        <a href="#pack" class="btn btn-primary btn-large" data-i18n="hero.ctaPrimary">
+                            Esplora i Pack
+                        </a>
+                        <a href="#pwa" class="btn btn-secondary btn-large" data-i18n="hero.ctaSecondary">
+                            Scopri la PWA
                         </a>
                     </div>
                 </div>
 
                 <div class="hero-visual">
-                    <!-- Placeholder for hero image - will be added later -->
                     <div class="hero-image-placeholder"></div>
                 </div>
             </div>
@@ -126,7 +196,7 @@
     </section>
 
     <!-- ============================================ -->
-    <!-- 2.5 HEAPRO ORIGIN STORY -->
+    <!-- 3. ORIGIN STORY -->
     <!-- ============================================ -->
     <section class="heapro-origin" id="heapro-origin">
         <div class="container">
@@ -135,26 +205,23 @@
                     Healody™ = Health + Melody
                 </h2>
                 <p class="origin-text" data-i18n="origin.text">
-                    Dietro ogni grande progetto c'è un'idea chiara. <strong>Healody™</strong> unisce letteralmente
+                    Dietro ogni grande progetto c'è un'idea chiara. Healody™ unisce letteralmente
                     "Salute" e "Melodia": un sistema strutturato che utilizza il potere delle frequenze
                     terapeutiche scientificamente studiate per supportare il tuo benessere quotidiano.
-                    Perché prendersi cura di sé dovrebbe essere semplice e accessibile, anche nella frenetica vita di oggi.
                 </p>
             </div>
         </div>
     </section>
 
     <!-- ============================================ -->
-    <!-- 3. PROBLEMA → SOLUZIONE -->
+    <!-- 4. PROBLEMA → SOLUZIONE -->
     <!-- ============================================ -->
     <section class="problem-solution" id="problema">
         <div class="container">
             <div class="problem-solution-grid">
                 <!-- Problema -->
                 <div class="problem-card fade-in-up">
-                    <div class="card-visual problem-visual">
-                        <!-- Stock photo placeholder -->
-                    </div>
+                    <div class="card-visual problem-visual"></div>
                     <div class="card-content">
                         <span class="card-label" data-i18n="problemSolution.problemLabel">Problema</span>
                         <h2 class="card-headline" data-i18n="problemSolution.problemHeadline">
@@ -176,9 +243,7 @@
 
                 <!-- Soluzione -->
                 <div class="solution-card fade-in-up">
-                    <div class="card-visual solution-visual">
-                        <!-- Stock photo placeholder -->
-                    </div>
+                    <div class="card-visual solution-visual"></div>
                     <div class="card-content">
                         <span class="card-label solution-label" data-i18n="problemSolution.solutionLabel">Soluzione</span>
                         <h2 class="card-headline" data-i18n="problemSolution.solutionHeadline">
@@ -188,7 +253,7 @@
                             Healody™ utilizza frequenze audio terapeutiche scientificamente
                             provate per riportare equilibrio nella tua vita.
                         </p>
-                        <a href="#features" class="btn btn-outline" data-i18n="problemSolution.ctaDiscover">
+                        <a href="#prodotti" class="btn btn-outline" data-i18n="problemSolution.ctaDiscover">
                             Scopri Healody™
                         </a>
                     </div>
@@ -198,147 +263,266 @@
     </section>
 
     <!-- ============================================ -->
-    <!-- 4. COSA OFFRE HEAPRO (3 Tipologie) -->
+    <!-- 5. TWO PRODUCTS OVERVIEW -->
     <!-- ============================================ -->
-    <section class="what-we-offer" id="offerta">
+    <section class="products-overview" id="prodotti">
         <div class="container">
             <div class="section-header fade-in-up">
-                <h2 class="section-title" data-i18n="whatWeOffer.headline">
-                    Tre Modi per Ritrovare il Benessere
+                <h2 class="section-title" data-i18n="products.headline">
+                    Due modi di vivere Healody™
                 </h2>
-                <p class="section-subtitle" data-i18n="whatWeOffer.subtitle">
-                    Scegli il formato perfetto per le tue esigenze
+                <p class="section-subtitle" data-i18n="products.subtitle">
+                    Scegli il formato che preferisci. La scienza dietro è la stessa.
                 </p>
             </div>
 
-            <div class="offer-grid">
-                <!-- Tipologia 1: Frequenze Dirette -->
-                <div class="offer-card fade-in-up">
-                    <div class="offer-icon">
-                        <svg width="80" height="80" viewBox="0 0 80 80">
-                            <!-- Single wave icon - placeholder -->
-                            <circle cx="40" cy="40" r="30" stroke="#3399ff" stroke-width="2" fill="none" opacity="0.3"/>
-                            <circle cx="40" cy="40" r="20" stroke="#3399ff" stroke-width="2" fill="none" opacity="0.6"/>
-                            <circle cx="40" cy="40" r="10" stroke="#3399ff" stroke-width="2" fill="none"/>
+            <div class="products-grid">
+                <!-- Product 1: Pack Standalone -->
+                <div class="product-card product-card-pack fade-in-up">
+                    <span class="product-badge product-badge-available" data-i18n="products.packBadge">Disponibile</span>
+                    <div class="product-icon">
+                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+                            <rect x="8" y="14" width="48" height="40" rx="4" stroke="currentColor" stroke-width="2.5" fill="none"/>
+                            <path d="M20 28 L20 40 M28 24 L28 44 M36 28 L36 40 M44 32 L44 36" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                            <circle cx="32" cy="10" r="3" fill="currentColor"/>
                         </svg>
                     </div>
-                    <h3 class="offer-title" data-i18n="whatWeOffer.type1.title">Frequenze Dirette</h3>
-                    <p class="offer-description" data-i18n="whatWeOffer.type1.description">
-                        Frequenze pure e costanti per rilassamento mirato.
-                        Perfette per sessioni di ascolto prolungato.
+                    <h3 class="product-title" data-i18n="products.packTitle">Pack Audio Standalone</h3>
+                    <p class="product-text" data-i18n="products.packText">
+                        File MP3 in alta qualità, scaricabili sul tuo dispositivo. Pronti all'uso, senza app, senza account.
                     </p>
+                    <a href="#pack" class="btn btn-primary" data-i18n="products.packCta">Esplora i Pack</a>
                 </div>
 
-                <!-- Tipologia 2: Frequenze Binaurali -->
-                <div class="offer-card fade-in-up">
-                    <div class="offer-icon">
-                        <svg width="80" height="80" viewBox="0 0 80 80">
-                            <!-- Two waves icon - placeholder -->
-                            <path d="M20 40 Q30 25, 40 40 T60 40" stroke="#9966ff" stroke-width="2" fill="none"/>
-                            <path d="M20 40 Q30 55, 40 40 T60 40" stroke="#66b2ff" stroke-width="2" fill="none"/>
+                <!-- Product 2: PWA Coming Soon -->
+                <div class="product-card product-card-pwa fade-in-up">
+                    <span class="product-badge product-badge-soon" data-i18n="products.pwaBadge">Coming Soon</span>
+                    <div class="product-icon">
+                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+                            <rect x="16" y="6" width="32" height="52" rx="4" stroke="currentColor" stroke-width="2.5" fill="none"/>
+                            <line x1="16" y1="14" x2="48" y2="14" stroke="currentColor" stroke-width="2.5"/>
+                            <line x1="16" y1="50" x2="48" y2="50" stroke="currentColor" stroke-width="2.5"/>
+                            <circle cx="32" cy="54" r="1.5" fill="currentColor"/>
+                            <path d="M26 30 Q32 22, 38 30 Q32 38, 26 30 Z" stroke="currentColor" stroke-width="2" fill="none"/>
                         </svg>
                     </div>
-                    <h3 class="offer-title" data-i18n="whatWeOffer.type2.title">Frequenze Binaurali</h3>
-                    <p class="offer-description" data-i18n="whatWeOffer.type2.description">
-                        Due frequenze diverse per orecchio destro e sinistro.
-                        Il cervello crea una terza frequenza per effetti profondi.
+                    <h3 class="product-title" data-i18n="products.pwaTitle">App Healody™</h3>
+                    <p class="product-text" data-i18n="products.pwaText">
+                        L'esperienza completa: libreria estesa, ascolto offline, statistiche personali e installazione come app sul tuo dispositivo.
                     </p>
-                </div>
-
-                <!-- Tipologia 3: Protocolli Sequenziali -->
-                <div class="offer-card fade-in-up">
-                    <div class="offer-icon">
-                        <svg width="80" height="80" viewBox="0 0 80 80">
-                            <!-- Sequence icon - placeholder -->
-                            <rect x="15" y="30" width="12" height="20" fill="#3399ff" opacity="0.4"/>
-                            <rect x="34" y="20" width="12" height="30" fill="#3399ff" opacity="0.7"/>
-                            <rect x="53" y="25" width="12" height="25" fill="#3399ff"/>
-                        </svg>
-                    </div>
-                    <h3 class="offer-title" data-i18n="whatWeOffer.type3.title">Protocolli Sequenziali</h3>
-                    <p class="offer-description" data-i18n="whatWeOffer.type3.description">
-                        Programmi completi con cambi di frequenza nel tempo.
-                        Sequenze studiate per trattamenti specifici e completi.
-                    </p>
+                    <a href="#pwa" class="btn btn-outline" data-i18n="products.pwaCta">Scopri la PWA</a>
                 </div>
             </div>
-
-            <p class="offer-footer-text fade-in-up" data-i18n="whatWeOffer.footerText">
-                Decine di frequenze e protocolli specifici per ogni aspetto della tua vita:
-                sonno, stress, creatività, equilibrio emotivo e molto altro.
-            </p>
         </div>
     </section>
 
     <!-- ============================================ -->
-    <!-- 5. CATEGORIE ESEMPIO (3 Card) -->
+    <!-- 6. PACK STANDALONE — Catalog -->
     <!-- ============================================ -->
-    <section class="categories" id="categorie">
+    <section class="pack-section" id="pack">
         <div class="container">
             <div class="section-header fade-in-up">
-                <h2 class="section-title" data-i18n="categories.headline">
-                    Esplora le Categorie
-                </h2>
+                <span class="section-eyebrow" data-i18n="products.packBadge">Disponibile</span>
+                <h2 class="section-title" data-i18n="pack.headline">Pack Audio Standalone</h2>
+                <p class="section-subtitle" data-i18n="pack.subtitle">
+                    Mixati a regola d'arte, normalizzati a -18 LUFS, pronti da scaricare
+                </p>
             </div>
 
-            <div class="categories-grid">
-                <!-- Categoria 1: Relax e Sonno -->
-                <div class="category-card fade-in-up">
-                    <div class="category-icon moon-icon">
-                        <img src="assets/icons/category-sleep-v2.svg" alt="Relax e Sonno" width="80" height="80">
+            <!-- Pack features -->
+            <h3 class="pack-features-title fade-in-up" data-i18n="pack.featuresTitle">Cosa contiene ogni Pack</h3>
+            <div class="pack-features-grid">
+                <div class="pack-feature fade-in-up">
+                    <div class="pack-feature-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <path d="M5 20 Q10 8, 15 20 T25 20 T35 20" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                        </svg>
                     </div>
-                    <h3 class="category-title" data-i18n="categories.cat1.title">Relax e Sonno</h3>
-                    <p class="category-description" data-i18n="categories.cat1.description">
-                        Frequenze per rilassamento profondo e riposo rigenerante.
-                        Ideale per la sera e prima di dormire.
+                    <h4 class="pack-feature-title" data-i18n="pack.feature1Title">Frequenze terapeutiche</h4>
+                    <p class="pack-feature-desc" data-i18n="pack.feature1Desc">
+                        Mix di frequenze binaurali e polinaurali sovrapposte ad ambient sonoro.
                     </p>
                 </div>
-
-                <!-- Categoria 2: Meditazione e Focus -->
-                <div class="category-card fade-in-up">
-                    <div class="category-icon meditation-icon">
-                        <img src="assets/icons/category-meditation-v2.svg" alt="Meditazione e Focus" width="80" height="80">
+                <div class="pack-feature fade-in-up">
+                    <div class="pack-feature-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <circle cx="20" cy="20" r="14" stroke="currentColor" stroke-width="2.5" fill="none"/>
+                            <text x="20" y="25" text-anchor="middle" font-size="10" font-weight="700" fill="currentColor">HD</text>
+                        </svg>
                     </div>
-                    <h3 class="category-title" data-i18n="categories.cat2.title">Meditazione e Focus</h3>
-                    <p class="category-description" data-i18n="categories.cat2.description">
-                        Protocolli per concentrazione e chiarezza mentale.
-                        Perfetti per studio, lavoro e pratiche meditative.
+                    <h4 class="pack-feature-title" data-i18n="pack.feature2Title">Audio HD</h4>
+                    <p class="pack-feature-desc" data-i18n="pack.feature2Desc">
+                        MP3 320 kbps, mastering -18 LUFS / -1 dBFS true peak.
                     </p>
                 </div>
-
-                <!-- Categoria 3: Energia e Vitalità -->
-                <div class="category-card fade-in-up">
-                    <div class="category-icon energy-icon">
-                        <img src="assets/icons/category-energy-v2.svg" alt="Energia e Vitalità" width="80" height="80">
+                <div class="pack-feature fade-in-up">
+                    <div class="pack-feature-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <path d="M10 20 A10 10 0 1 1 20 30" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                            <path d="M16 26 L20 30 L16 34" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
                     </div>
-                    <h3 class="category-title" data-i18n="categories.cat3.title">Energia e Vitalità</h3>
-                    <p class="category-description" data-i18n="categories.cat3.description">
-                        Sequenze per ricarica energetica e benessere attivo.
-                        Ottimi per iniziare la giornata con la giusta energia.
+                    <h4 class="pack-feature-title" data-i18n="pack.feature3Title">Loop senza tagli</h4>
+                    <p class="pack-feature-desc" data-i18n="pack.feature3Desc">
+                        Singolo file in loop continuo, senza interruzioni.
                     </p>
                 </div>
-
-                <!-- Categoria 4: Rigenerazione Fisica e Salute -->
-                <div class="category-card fade-in-up">
-                    <div class="category-icon regeneration-icon">
-                        <img src="assets/icons/category-regeneration.svg" alt="Rigenerazione e Salute" width="80" height="80">
+                <div class="pack-feature fade-in-up">
+                    <div class="pack-feature-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <path d="M20 6 L20 26 M12 18 L20 26 L28 18" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8 32 L32 32" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                        </svg>
                     </div>
-                    <h3 class="category-title" data-i18n="categories.cat4.title">Rigenerazione e Salute</h3>
-                    <p class="category-description" data-i18n="categories.cat4.description">
-                        Frequenze per sostenere il recupero fisico e la rigenerazione cellulare.
-                        Ideale dopo l'attività fisica o per il benessere del corpo.
+                    <h4 class="pack-feature-title" data-i18n="pack.feature4Title">Pronto all'uso</h4>
+                    <p class="pack-feature-desc" data-i18n="pack.feature4Desc">
+                        Nessuna app richiesta. Scarica e ascolta col tuo player.
                     </p>
                 </div>
             </div>
 
-            <p class="categories-footer-text fade-in-up" data-i18n="categories.footerText">
-                + Ansia, Creatività, Equilibrio Emotivo, Guarigione, e molte altre categorie specifiche.
+            <!-- Catalog -->
+            <div class="pack-catalog-header fade-in-up">
+                <h3 class="pack-catalog-title" data-i18n="pack.catalogTitle">Il catalogo</h3>
+                <p class="pack-catalog-subtitle" data-i18n="pack.catalogSubtitle">Pack tematici per ogni esigenza</p>
+            </div>
+
+            <div class="pack-grid">
+                <!-- Sleep -->
+                <div class="pack-card fade-in-up" data-pack="sleep">
+                    <div class="pack-card-icon">
+                        <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
+                            <path d="M44 30 A18 18 0 1 1 26 12 A14 14 0 0 0 44 30 Z" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h4 class="pack-card-name" data-i18n="pack.sleep.name">Sleep Pack</h4>
+                    <p class="pack-card-desc" data-i18n="pack.sleep.description">
+                        Frequenze delta e theta con ambient notturno per il sonno profondo.
+                    </p>
+                    <span class="pack-card-meta" data-i18n="pack.duration">Loop continuo</span>
+                    <button class="btn btn-outline btn-pack-buy" disabled data-i18n="pack.comingSoon">Disponibile a breve</button>
+                </div>
+
+                <!-- Focus -->
+                <div class="pack-card fade-in-up" data-pack="focus">
+                    <div class="pack-card-icon">
+                        <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
+                            <circle cx="28" cy="28" r="20" stroke="currentColor" stroke-width="2.5" fill="none"/>
+                            <circle cx="28" cy="28" r="11" stroke="currentColor" stroke-width="2.5" fill="none"/>
+                            <circle cx="28" cy="28" r="3" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h4 class="pack-card-name" data-i18n="pack.focus.name">Focus Pack</h4>
+                    <p class="pack-card-desc" data-i18n="pack.focus.description">
+                        Frequenze beta e gamma con ambient minimal per concentrazione intensa.
+                    </p>
+                    <span class="pack-card-meta" data-i18n="pack.duration">Loop continuo</span>
+                    <button class="btn btn-outline btn-pack-buy" disabled data-i18n="pack.comingSoon">Disponibile a breve</button>
+                </div>
+
+                <!-- Calm -->
+                <div class="pack-card fade-in-up" data-pack="calm">
+                    <div class="pack-card-icon">
+                        <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
+                            <path d="M14 32 Q20 22, 28 32 T42 32" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                            <path d="M14 22 Q20 12, 28 22 T42 22" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.6"/>
+                        </svg>
+                    </div>
+                    <h4 class="pack-card-name" data-i18n="pack.calm.name">Calm Pack</h4>
+                    <p class="pack-card-desc" data-i18n="pack.calm.description">
+                        Frequenze alpha con ambient naturale contro ansia e tensione.
+                    </p>
+                    <span class="pack-card-meta" data-i18n="pack.duration">Loop continuo</span>
+                    <button class="btn btn-outline btn-pack-buy" disabled data-i18n="pack.comingSoon">Disponibile a breve</button>
+                </div>
+
+                <!-- Energy -->
+                <div class="pack-card fade-in-up" data-pack="energy">
+                    <div class="pack-card-icon">
+                        <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
+                            <path d="M30 6 L16 32 L26 32 L22 50 L40 22 L30 22 Z" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h4 class="pack-card-name" data-i18n="pack.energy.name">Energy Pack</h4>
+                    <p class="pack-card-desc" data-i18n="pack.energy.description">
+                        Frequenze beta con ambient ritmico per ricarica energetica.
+                    </p>
+                    <span class="pack-card-meta" data-i18n="pack.duration">Loop continuo</span>
+                    <button class="btn btn-outline btn-pack-buy" disabled data-i18n="pack.comingSoon">Disponibile a breve</button>
+                </div>
+
+                <!-- Meditation -->
+                <div class="pack-card fade-in-up" data-pack="meditation">
+                    <div class="pack-card-icon">
+                        <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
+                            <circle cx="28" cy="18" r="6" stroke="currentColor" stroke-width="2.5" fill="none"/>
+                            <path d="M14 44 Q20 30, 28 30 Q36 30, 42 44" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                            <path d="M10 44 L46 44" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h4 class="pack-card-name" data-i18n="pack.meditation.name">Meditation Pack</h4>
+                    <p class="pack-card-desc" data-i18n="pack.meditation.description">
+                        Frequenze theta con ambient meditativo per pratica e introspezione.
+                    </p>
+                    <span class="pack-card-meta" data-i18n="pack.duration">Loop continuo</span>
+                    <button class="btn btn-outline btn-pack-buy" disabled data-i18n="pack.comingSoon">Disponibile a breve</button>
+                </div>
+
+                <!-- Recovery -->
+                <div class="pack-card fade-in-up" data-pack="recovery">
+                    <div class="pack-card-icon">
+                        <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
+                            <path d="M28 46 C16 38, 8 30, 8 22 C8 16, 13 12, 18 12 C22 12, 26 14, 28 18 C30 14, 34 12, 38 12 C43 12, 48 16, 48 22 C48 30, 40 38, 28 46 Z" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h4 class="pack-card-name" data-i18n="pack.recovery.name">Recovery Pack</h4>
+                    <p class="pack-card-desc" data-i18n="pack.recovery.description">
+                        Frequenze delta con ambient avvolgente per recupero fisico.
+                    </p>
+                    <span class="pack-card-meta" data-i18n="pack.duration">Loop continuo</span>
+                    <button class="btn btn-outline btn-pack-buy" disabled data-i18n="pack.comingSoon">Disponibile a breve</button>
+                </div>
+            </div>
+
+            <!-- All-in-One Bundle (highlighted) -->
+            <div class="pack-bundle fade-in-up">
+                <div class="pack-bundle-glow"></div>
+                <div class="pack-bundle-content">
+                    <span class="pack-bundle-badge" data-i18n="pack.allInOne.badge">Bundle Completo</span>
+                    <h3 class="pack-bundle-name" data-i18n="pack.allInOne.name">All-in-One Bundle</h3>
+                    <p class="pack-bundle-desc" data-i18n="pack.allInOne.description">
+                        Tutti e 6 i pack in un'unica soluzione. Include in omaggio una guida PDF dedicata: come usare ogni pack, in quali momenti della giornata, abbinamenti consigliati e protocolli d'uso.
+                    </p>
+                    <div class="pack-bundle-includes">
+                        <span class="pack-bundle-includes-item">Sleep · Focus · Calm · Energy · Meditation · Recovery</span>
+                        <span class="pack-bundle-bonus" data-i18n="pack.allInOne.bonus">+ Guida PDF in regalo</span>
+                    </div>
+                    <button class="btn btn-primary btn-large btn-pack-buy" disabled data-i18n="pack.comingSoon">Disponibile a breve</button>
+                </div>
+                <div class="pack-bundle-visual">
+                    <svg width="180" height="180" viewBox="0 0 180 180" fill="none">
+                        <!-- Stack of pack cards -->
+                        <rect x="40" y="50" width="80" height="100" rx="8" fill="#3399ff" opacity="0.15" transform="rotate(-12 80 100)"/>
+                        <rect x="50" y="45" width="80" height="100" rx="8" fill="#9966ff" opacity="0.2" transform="rotate(-6 90 95)"/>
+                        <rect x="60" y="40" width="80" height="100" rx="8" fill="#3399ff" opacity="0.3" transform="rotate(0 100 90)"/>
+                        <rect x="70" y="35" width="80" height="100" rx="8" stroke="currentColor" stroke-width="2.5" fill="white" transform="rotate(6 110 85)"/>
+                        <!-- Wave inside top card -->
+                        <g transform="rotate(6 110 85)">
+                            <path d="M82 80 Q92 68, 102 80 T122 80 T142 80" stroke="#3399ff" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                            <text x="110" y="115" text-anchor="middle" font-size="11" font-weight="700" fill="#3399ff">PDF</text>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+
+            <p class="pack-footer-note fade-in-up" data-i18n="pack.footerNote">
+                I prezzi e i checkout saranno attivi al lancio dello shop. Catalogo in espansione.
             </p>
         </div>
     </section>
 
     <!-- ============================================ -->
-    <!-- 6. SCIENZA DIETRO LE FREQUENZE -->
+    <!-- 7. SCIENZA (Common to both products) -->
     <!-- ============================================ -->
     <section class="science" id="scienza">
         <div class="container">
@@ -347,11 +531,11 @@
                     La Scienza del Benessere Sonoro
                 </h2>
                 <p class="section-intro" data-i18n="science.intro">
-                    Le frequenze terapeutiche non sono magia - sono scienza. Ecco come funzionano.
+                    Le frequenze terapeutiche non sono magia — sono scienza. Ecco come funzionano.
                 </p>
             </div>
 
-            <!-- Blocco 1: Onde Cerebrali -->
+            <!-- Block 1: Brain Waves -->
             <div class="science-block fade-in-up">
                 <div class="science-content">
                     <h3 class="science-subtitle" data-i18n="science.block1.title">
@@ -359,8 +543,7 @@
                     </h3>
                     <p class="science-text" data-i18n="science.block1.text">
                         Il cervello umano produce costantemente onde elettriche che oscillano
-                        a diverse frequenze. Ogni frequenza corrisponde a uno stato mentale
-                        specifico: attenzione, rilassamento, sonno profondo o meditazione.
+                        a diverse frequenze. Ogni frequenza corrisponde a uno stato mentale specifico.
                     </p>
                 </div>
 
@@ -403,7 +586,7 @@
                 </div>
             </div>
 
-            <!-- Blocco 2: Risonanza -->
+            <!-- Block 2: Entrainment -->
             <div class="science-block fade-in-up">
                 <div class="science-content">
                     <h3 class="science-subtitle" data-i18n="science.block2.title">
@@ -411,14 +594,12 @@
                     </h3>
                     <p class="science-text" data-i18n="science.block2.text">
                         Quando ascolti una frequenza specifica, il tuo cervello tende naturalmente
-                        a sincronizzarsi con essa - un fenomeno chiamato 'entrainment neurale'.
-                        Le frequenze binaurali sfruttano questo principio per guidare il cervello
-                        verso stati desiderati.
+                        a sincronizzarsi con essa — un fenomeno chiamato 'entrainment neurale'.
                     </p>
                 </div>
             </div>
 
-            <!-- Blocco 3: Evidenze Scientifiche -->
+            <!-- Block 3: Research -->
             <div class="science-block fade-in-up">
                 <div class="science-content">
                     <h3 class="science-subtitle" data-i18n="science.block3.title">
@@ -444,136 +625,186 @@
     </section>
 
     <!-- ============================================ -->
-    <!-- 7. FEATURES (4 Card Grid) -->
+    <!-- 8. CATEGORIE (Common to both) -->
     <!-- ============================================ -->
-    <section class="features" id="features">
+    <section class="categories" id="categorie">
         <div class="container">
             <div class="section-header fade-in-up">
-                <h2 class="section-title" data-i18n="features.headline">
-                    Perché Scegliere Healody™
+                <h2 class="section-title" data-i18n="categories.headline">
+                    Per quali esigenze
                 </h2>
+                <p class="section-subtitle" data-i18n="categories.subtitle">
+                    Le frequenze terapeutiche supportano molti aspetti del benessere quotidiano
+                </p>
             </div>
 
-            <div class="features-grid">
-                <!-- Feature 1: Tante Frequenze -->
-                <div class="feature-card fade-in-up">
-                    <div class="feature-icon">
-                        <img src="assets/icons/feature-frequencies.svg" alt="Frequenze" width="80" height="80">
+            <div class="categories-grid">
+                <div class="category-card fade-in-up">
+                    <div class="category-icon moon-icon">
+                        <img src="assets/icons/category-sleep-v2.svg" alt="Relax e Sonno" width="80" height="80">
                     </div>
-                    <h3 class="feature-title" data-i18n="features.feat1.title">
-                        Tante Frequenze Terapeutiche
-                    </h3>
-                    <p class="feature-description" data-i18n="features.feat1.description">
-                        Decine di frequenze dirette, binaurali e protocolli sequenziali.
-                        Ogni contenuto è studiato per uno scopo specifico.
+                    <h3 class="category-title" data-i18n="categories.cat1.title">Relax e Sonno</h3>
+                    <p class="category-description" data-i18n="categories.cat1.description">
+                        Rilassamento profondo e riposo rigenerante. Ideale per la sera.
                     </p>
                 </div>
 
-                <!-- Feature 2: Sicurezza -->
-                <div class="feature-card fade-in-up">
-                    <div class="feature-icon">
-                        <img src="assets/icons/feature-security.svg" alt="Sicurezza" width="80" height="80">
+                <div class="category-card fade-in-up">
+                    <div class="category-icon meditation-icon">
+                        <img src="assets/icons/category-meditation-v2.svg" alt="Meditazione e Focus" width="80" height="80">
                     </div>
-                    <h3 class="feature-title" data-i18n="features.feat2.title">
-                        Sicurezza Totale
-                    </h3>
-                    <p class="feature-description" data-i18n="features.feat2.description">
-                        Audio protetti con cifratura AES-256. La tua esperienza di benessere
-                        è completamente privata e sicura.
+                    <h3 class="category-title" data-i18n="categories.cat2.title">Meditazione e Focus</h3>
+                    <p class="category-description" data-i18n="categories.cat2.description">
+                        Concentrazione e chiarezza mentale. Perfetto per studio e lavoro.
                     </p>
                 </div>
 
-                <!-- Feature 3: Offline -->
-                <div class="feature-card fade-in-up">
-                    <div class="feature-icon">
-                        <img src="assets/icons/feature-offline.svg" alt="Offline" width="80" height="80">
+                <div class="category-card fade-in-up">
+                    <div class="category-icon energy-icon">
+                        <img src="assets/icons/category-energy-v2.svg" alt="Energia e Vitalità" width="80" height="80">
                     </div>
-                    <h3 class="feature-title" data-i18n="features.feat3.title">
-                        Funziona Ovunque
-                    </h3>
-                    <p class="feature-description" data-i18n="features.feat3.description">
-                        Una volta installata, Healody™ funziona anche senza connessione.
-                        Rilassati in qualsiasi momento e luogo.
+                    <h3 class="category-title" data-i18n="categories.cat3.title">Energia e Vitalità</h3>
+                    <p class="category-description" data-i18n="categories.cat3.description">
+                        Ricarica energetica e benessere attivo. Ottimo per iniziare la giornata.
                     </p>
                 </div>
 
-                <!-- Feature 4: Semplicità -->
-                <div class="feature-card fade-in-up">
-                    <div class="feature-icon">
-                        <img src="assets/icons/feature-simplicity.svg" alt="Semplicità" width="80" height="80">
+                <div class="category-card fade-in-up">
+                    <div class="category-icon regeneration-icon">
+                        <img src="assets/icons/category-regeneration.svg" alt="Rigenerazione e Salute" width="80" height="80">
                     </div>
-                    <h3 class="feature-title" data-i18n="features.feat4.title">
-                        Semplicità Totale
-                    </h3>
-                    <p class="feature-description" data-i18n="features.feat4.description">
-                        Interfaccia intuitiva, nessuna configurazione complessa.
-                        Scegli la frequenza e inizia subito.
+                    <h3 class="category-title" data-i18n="categories.cat4.title">Rigenerazione e Salute</h3>
+                    <p class="category-description" data-i18n="categories.cat4.description">
+                        Recupero fisico e rigenerazione cellulare. Ideale dopo l'attività fisica.
                     </p>
                 </div>
             </div>
+
+            <p class="categories-footer-text fade-in-up" data-i18n="categories.footerText">
+                + Ansia, Creatività, Equilibrio Emotivo, Guarigione, e altre categorie in arrivo.
+            </p>
         </div>
     </section>
 
     <!-- ============================================ -->
-    <!-- 8. COME FUNZIONA (3 Steps) -->
+    <!-- 9. PWA HEALODY (Coming Soon) -->
     <!-- ============================================ -->
-    <section class="how-it-works" id="come-funziona">
+    <section class="pwa-section" id="pwa">
         <div class="container">
             <div class="section-header fade-in-up">
-                <h2 class="section-title" data-i18n="howItWorks.headline">
-                    Semplice come 1-2-3
-                </h2>
+                <span class="section-eyebrow section-eyebrow-soon" data-i18n="pwa.badge">Coming Soon</span>
+                <h2 class="section-title" data-i18n="pwa.headline">L'App Healody™</h2>
+                <p class="section-subtitle" data-i18n="pwa.subtitle">
+                    L'esperienza completa, in arrivo nelle prossime settimane
+                </p>
             </div>
 
-            <div class="steps-grid">
-                <!-- Step 1 -->
-                <div class="step-card fade-in-up">
-                    <div class="step-number">1</div>
-                    <div class="step-icon">
-                        <img src="assets/icons/step-download.svg" alt="Scarica" width="120" height="120">
+            <p class="pwa-intro fade-in-up" data-i18n="pwa.intro">
+                L'App Healody™ è una Progressive Web App: si installa sul tuo dispositivo come un'app nativa,
+                funziona offline e ti dà accesso a tutta la libreria di frequenze e protocolli.
+            </p>
+
+            <!-- PWA Features -->
+            <h3 class="pwa-block-title fade-in-up" data-i18n="pwa.featuresTitle">Cosa offrirà</h3>
+            <div class="pwa-features-grid">
+                <div class="pwa-feature-card fade-in-up">
+                    <div class="pwa-feature-icon">
+                        <img src="assets/icons/feature-frequencies.svg" alt="" width="64" height="64">
                     </div>
-                    <h3 class="step-title" data-i18n="howItWorks.step1.title">Scarica e Attiva</h3>
-                    <p class="step-description" data-i18n="howItWorks.step1.description">
+                    <h4 class="pwa-feature-title" data-i18n="pwa.feat1.title">Libreria estesa</h4>
+                    <p class="pwa-feature-desc" data-i18n="pwa.feat1.description">
+                        Decine di frequenze dirette, binaurali, polinaurali e protocolli sequenziali.
+                    </p>
+                </div>
+                <div class="pwa-feature-card fade-in-up">
+                    <div class="pwa-feature-icon">
+                        <img src="assets/icons/feature-security.svg" alt="" width="64" height="64">
+                    </div>
+                    <h4 class="pwa-feature-title" data-i18n="pwa.feat2.title">Audio protetti</h4>
+                    <p class="pwa-feature-desc" data-i18n="pwa.feat2.description">
+                        Contenuti cifrati con AES-256. La tua esperienza è privata e sicura.
+                    </p>
+                </div>
+                <div class="pwa-feature-card fade-in-up">
+                    <div class="pwa-feature-icon">
+                        <img src="assets/icons/feature-offline.svg" alt="" width="64" height="64">
+                    </div>
+                    <h4 class="pwa-feature-title" data-i18n="pwa.feat3.title">Funziona offline</h4>
+                    <p class="pwa-feature-desc" data-i18n="pwa.feat3.description">
+                        Una volta installata e sincronizzata, l'App funziona anche senza connessione.
+                    </p>
+                </div>
+                <div class="pwa-feature-card fade-in-up">
+                    <div class="pwa-feature-icon">
+                        <img src="assets/icons/feature-simplicity.svg" alt="" width="64" height="64">
+                    </div>
+                    <h4 class="pwa-feature-title" data-i18n="pwa.feat4.title">Statistiche personali</h4>
+                    <p class="pwa-feature-desc" data-i18n="pwa.feat4.description">
+                        Cronologia ascolti, sessioni, progressi nel tempo.
+                    </p>
+                </div>
+            </div>
+
+            <!-- PWA How It Works -->
+            <h3 class="pwa-block-title fade-in-up" data-i18n="pwa.howTitle">Come funzionerà</h3>
+            <div class="pwa-steps-grid">
+                <div class="pwa-step-card fade-in-up">
+                    <div class="pwa-step-number">1</div>
+                    <div class="pwa-step-icon">
+                        <img src="assets/icons/step-download.svg" alt="" width="100" height="100">
+                    </div>
+                    <h4 class="pwa-step-title" data-i18n="pwa.step1Title">Installa e attiva</h4>
+                    <p class="pwa-step-desc" data-i18n="pwa.step1Desc">
                         Inserisci il tuo codice licenza e crea il tuo account in pochi secondi.
                     </p>
                 </div>
-
-                <!-- Step 2 -->
-                <div class="step-card fade-in-up">
-                    <div class="step-number">2</div>
-                    <div class="step-icon">
-                        <img src="assets/icons/step-choose.svg" alt="Scegli" width="120" height="120">
+                <div class="pwa-step-card fade-in-up">
+                    <div class="pwa-step-number">2</div>
+                    <div class="pwa-step-icon">
+                        <img src="assets/icons/step-choose.svg" alt="" width="100" height="100">
                     </div>
-                    <h3 class="step-title" data-i18n="howItWorks.step2.title">Scegli la Frequenza</h3>
-                    <p class="step-description" data-i18n="howItWorks.step2.description">
-                        Seleziona la frequenza o protocollo adatto al tuo stato d'animo o obiettivo.
+                    <h4 class="pwa-step-title" data-i18n="pwa.step2Title">Scegli la frequenza</h4>
+                    <p class="pwa-step-desc" data-i18n="pwa.step2Desc">
+                        Seleziona la frequenza o il protocollo adatto al tuo obiettivo.
                     </p>
                 </div>
-
-                <!-- Step 3 -->
-                <div class="step-card fade-in-up">
-                    <div class="step-number">3</div>
-                    <div class="step-icon">
-                        <img src="assets/icons/step-relax.svg" alt="Rilassati" width="120" height="120">
+                <div class="pwa-step-card fade-in-up">
+                    <div class="pwa-step-number">3</div>
+                    <div class="pwa-step-icon">
+                        <img src="assets/icons/step-relax.svg" alt="" width="100" height="100">
                     </div>
-                    <h3 class="step-title" data-i18n="howItWorks.step3.title">Rilassati</h3>
-                    <p class="step-description" data-i18n="howItWorks.step3.description">
-                        Indossa le cuffie, premi play e lasciati guidare dal suono terapeutico.
+                    <h4 class="pwa-step-title" data-i18n="pwa.step3Title">Rilassati</h4>
+                    <p class="pwa-step-desc" data-i18n="pwa.step3Desc">
+                        Indossa le cuffie, premi play e lasciati guidare.
                     </p>
                 </div>
+            </div>
+
+            <!-- PWA Install CTA (Coming Soon) -->
+            <div class="pwa-install-cta fade-in-up">
+                <button class="btn btn-primary btn-large btn-pwa-install" id="ctaInstallPwa">
+                    <span class="btn-pwa-label" data-i18n="pwa.installCta">Installa l'App</span>
+                    <span class="btn-pwa-pill" data-i18n="pwa.badge">Coming Soon</span>
+                </button>
+                <p class="pwa-install-note" data-i18n="pwa.installNote">
+                    Disponibile a breve per iOS, Android e Desktop
+                </p>
             </div>
         </div>
     </section>
 
     <!-- ============================================ -->
-    <!-- 9. BENEFICI (Grid 2x3) -->
+    <!-- 10. BENEFICI (Common) -->
     <!-- ============================================ -->
     <section class="benefits" id="benefici">
         <div class="container">
             <div class="section-header fade-in-up">
                 <h2 class="section-title" data-i18n="benefits.headline">
-                    I Benefici di Healody™
+                    I Benefici delle Frequenze Healody™
                 </h2>
+                <p class="section-subtitle" data-i18n="benefits.subtitle">
+                    Pack o App, gli effetti dell'ascolto sono gli stessi
+                </p>
             </div>
 
             <div class="benefits-grid">
@@ -606,7 +837,7 @@
     </section>
 
     <!-- ============================================ -->
-    <!-- 10. FAQ (Accordion) -->
+    <!-- 11. FAQ -->
     <!-- ============================================ -->
     <section class="faq" id="faq">
         <div class="container">
@@ -617,95 +848,83 @@
             </div>
 
             <div class="faq-list">
-                <!-- FAQ 1 -->
                 <div class="faq-item fade-in-up">
                     <button class="faq-question">
                         <span data-i18n="faq.q1.question">Cos'è una frequenza terapeutica?</span>
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p data-i18n="faq.q1.answer">
-                            Le frequenze terapeutiche sono onde sonore specifiche che interagiscono
-                            con le onde cerebrali per promuovere stati di rilassamento, concentrazione
-                            o benessere. Ogni frequenza ha uno scopo specifico supportato dalla ricerca scientifica.
-                        </p>
+                        <p data-i18n="faq.q1.answer">Risposta...</p>
                     </div>
                 </div>
 
-                <!-- FAQ 2 -->
                 <div class="faq-item fade-in-up">
                     <button class="faq-question">
-                        <span data-i18n="faq.q2.question">Cosa sono i protocolli sequenziali?</span>
+                        <span data-i18n="faq.q2.question">Differenza Pack e App?</span>
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p data-i18n="faq.q2.answer">
-                            I protocolli sequenziali sono programmi audio completi che cambiano frequenza
-                            nel tempo, creando una sequenza specifica di stimoli sonori. Sono ideali per
-                            trattamenti completi che richiedono diverse fasi (es: rilassamento progressivo,
-                            meditazione guidata, sonno profondo).
-                        </p>
+                        <p data-i18n="faq.q2.answer">Risposta...</p>
                     </div>
                 </div>
 
-                <!-- FAQ 3 -->
                 <div class="faq-item fade-in-up">
                     <button class="faq-question">
-                        <span data-i18n="faq.q3.question">Devo usare le cuffie?</span>
+                        <span data-i18n="faq.q3.question">Cosa contiene un Pack?</span>
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p data-i18n="faq.q3.answer">
-                            Sì, per un'esperienza ottimale consigliamo cuffie di buona qualità.
-                            Le cuffie permettono un'immersione completa e isolano dai rumori esterni.
-                            Per le frequenze binaurali, le cuffie sono essenziali poiché ogni orecchio
-                            deve ricevere una frequenza diversa.
-                        </p>
+                        <p data-i18n="faq.q3.answer">Risposta...</p>
                     </div>
                 </div>
 
-                <!-- FAQ 4 -->
                 <div class="faq-item fade-in-up">
                     <button class="faq-question">
-                        <span data-i18n="faq.q4.question">Posso usarlo mentre dormo?</span>
+                        <span data-i18n="faq.q4.question">Quando esce l'App?</span>
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p data-i18n="faq.q4.answer">
-                            Assolutamente sì! Molti utenti usano Healody™ per addormentarsi meglio.
-                            Le frequenze specifiche per il sonno sono particolarmente efficaci per
-                            indurre il sonno profondo e migliorare la qualità del riposo.
-                        </p>
+                        <p data-i18n="faq.q4.answer">Risposta...</p>
                     </div>
                 </div>
 
-                <!-- FAQ 5 -->
                 <div class="faq-item fade-in-up">
                     <button class="faq-question">
-                        <span data-i18n="faq.q5.question">È sicuro?</span>
+                        <span data-i18n="faq.q5.question">Devo usare le cuffie?</span>
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p data-i18n="faq.q5.answer">
-                            Sì, le frequenze audio sono completamente sicure e naturali. Non hanno
-                            effetti collaterali e possono essere utilizzate da chiunque. In caso di
-                            dubbi o condizioni mediche specifiche, consulta il tuo medico.
-                        </p>
+                        <p data-i18n="faq.q5.answer">Risposta...</p>
                     </div>
                 </div>
 
-                <!-- FAQ 6 -->
                 <div class="faq-item fade-in-up">
                     <button class="faq-question">
-                        <span data-i18n="faq.q6.question">Come funziona il sistema licenze?</span>
+                        <span data-i18n="faq.q6.question">Posso usarli mentre dormo?</span>
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p data-i18n="faq.q6.answer">
-                            Acquisti un codice licenza, lo inserisci nell'app durante la registrazione
-                            e hai accesso immediato. La licenza è valida per 1 anno e funziona su un
-                            solo dispositivo per garantire sicurezza e qualità del servizio.
-                        </p>
+                        <p data-i18n="faq.q6.answer">Risposta...</p>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in-up">
+                    <button class="faq-question">
+                        <span data-i18n="faq.q7.question">È sicuro?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq.q7.answer">Risposta...</p>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in-up">
+                    <button class="faq-question">
+                        <span data-i18n="faq.q8.question">Cos'è la guida PDF del Bundle?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq.q8.answer">Risposta...</p>
                     </div>
                 </div>
             </div>
@@ -713,76 +932,94 @@
     </section>
 
     <!-- ============================================ -->
-    <!-- 11. CTA FINALE -->
+    <!-- 12. FINAL CTA -->
     <!-- ============================================ -->
     <section class="final-cta" id="cta-finale">
         <div class="container">
             <div class="final-cta-content fade-in-up">
                 <h2 class="final-cta-headline" data-i18n="finalCta.headline">
-                    Trova il tuo angolo di benessere
+                    Inizia oggi il tuo percorso
                 </h2>
                 <p class="final-cta-subheadline" data-i18n="finalCta.subheadline">
-                    Inizia oggi il tuo percorso verso il benessere con Healody™
+                    Scarica un Pack adesso o aspetta l'arrivo dell'App. Scegli tu.
                 </p>
-                <button class="btn btn-primary btn-large" id="ctaInstallFinal" data-i18n="finalCta.cta">
-                    Installa Healody™ Ora
-                </button>
-                <p class="final-cta-note" data-i18n="finalCta.note">
-                    Disponibile per iOS, Android e Web. Nessuna carta di credito richiesta per l'installazione.
-                </p>
+                <div class="final-cta-buttons">
+                    <a href="#pack" class="btn btn-primary btn-large" data-i18n="finalCta.ctaPack">Esplora i Pack</a>
+                    <a href="#pwa" class="btn btn-secondary btn-large" data-i18n="finalCta.ctaPwa">Scopri la PWA</a>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- ============================================ -->
-    <!-- 12. FOOTER -->
+    <!-- 13. FOOTER -->
     <!-- ============================================ -->
     <footer class="footer" id="footer">
         <div class="container">
             <div class="footer-content">
-                <!-- Logo e Tagline -->
                 <div class="footer-brand">
                     <img src="images/logo-full-200.png" alt="Healody™ Logo" class="footer-logo">
                     <span class="footer-tagline" data-i18n="footer.tagline">Benessere attraverso il suono</span>
                 </div>
 
-                <!-- Links -->
                 <div class="footer-links">
-                    <a href="#" class="footer-link" data-i18n="footer.privacy">Privacy Policy</a>
-                    <a href="#" class="footer-link" data-i18n="footer.terms">Termini di Servizio</a>
-                    <a href="#" class="footer-link" data-i18n="footer.contact">Contatti</a>
+                    <a href="privacy-policy.html" class="footer-link" data-i18n="footer.privacy">Privacy Policy</a>
+                    <a href="cookie-policy.html" class="footer-link" data-i18n="footer.cookie">Cookie Policy</a>
+                    <a href="terms.html" class="footer-link" data-i18n="footer.terms">Termini di Vendita</a>
+                    <a href="mailto:protocollosalute.it@gmail.com" class="footer-link" data-i18n="footer.contact">Contatti</a>
+                    <button class="footer-link footer-link-button" id="manageCookiesBtn" data-i18n="footer.manageCookies">Gestisci cookie</button>
                 </div>
 
-                <!-- Social (placeholder) -->
-                <div class="footer-social">
-                    <!-- Da attivare in futuro -->
-                    <!-- <a href="#" class="social-link">Facebook</a> -->
-                    <!-- <a href="#" class="social-link">Instagram</a> -->
-                </div>
+                <div class="footer-social"></div>
 
-                <!-- Copyright -->
                 <div class="footer-copyright">
-                    <p data-i18n="footer.copyright">© 2025 Healody™. Tutti i diritti riservati.</p>
+                    <p data-i18n="footer.copyright">© 2026 Healody™ · Un prodotto di Protocollo Salute™. Tutti i diritti riservati.</p>
                 </div>
             </div>
         </div>
     </footer>
 
     <!-- ============================================ -->
-    <!-- INSTALL APP MODAL -->
+    <!-- COOKIE BANNER (GDPR) -->
+    <!-- Hidden by default. Shown only when tracking scripts are active. -->
+    <!-- See main.js: HAS_TRACKING_SCRIPTS flag. -->
     <!-- ============================================ -->
-    <div class="modal" id="installModal">
+    <div class="cookie-banner" id="cookieBanner" hidden>
+        <div class="cookie-banner-inner">
+            <div class="cookie-banner-text">
+                <h3 class="cookie-banner-title" data-i18n="cookieBanner.title">Rispettiamo la tua privacy</h3>
+                <p class="cookie-banner-message" data-i18n="cookieBanner.message">
+                    Utilizziamo cookie tecnici necessari al funzionamento del sito e, con il tuo consenso, cookie analitici per migliorare l'esperienza. Puoi accettare tutto, rifiutare o personalizzare le tue preferenze.
+                </p>
+                <p class="cookie-banner-links">
+                    <a href="cookie-policy.html" data-i18n="cookieBanner.policyLink">Leggi la Cookie Policy</a>
+                    ·
+                    <a href="privacy-policy.html" data-i18n="cookieBanner.privacyLink">Privacy Policy</a>
+                </p>
+            </div>
+            <div class="cookie-banner-actions">
+                <button class="btn btn-outline cookie-btn" id="cookieRejectBtn" data-i18n="cookieBanner.reject">Solo necessari</button>
+                <button class="btn btn-primary cookie-btn" id="cookieAcceptBtn" data-i18n="cookieBanner.accept">Accetta tutto</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- PWA COMING SOON MODAL -->
+    <!-- ============================================ -->
+    <div class="modal" id="pwaSoonModal">
         <div class="modal-overlay"></div>
         <div class="modal-content">
             <button class="modal-close" id="modalClose">&times;</button>
             <div class="modal-body">
                 <img src="images/logo-icon.svg" alt="Healody™" class="modal-logo">
-                <h3 class="modal-title" data-i18n="modal.title">Installa Healody™</h3>
-                <p class="modal-device-info" id="modalDeviceInfo"></p>
-                <div class="modal-instructions" id="modalInstructions"></div>
+                <h3 class="modal-title" data-i18n="modal.title">App Healody™ — In arrivo</h3>
+                <p class="modal-text" data-i18n="modal.text">
+                    L'App Healody™ è in fase di testing finale e sarà disponibile nelle prossime settimane.
+                </p>
                 <div class="modal-actions">
-                    <button class="btn btn-primary" id="modalConfirm" data-i18n="modal.confirm">Vai all'App</button>
-                    <button class="btn btn-secondary" id="modalCancel" data-i18n="modal.cancel">Annulla</button>
+                    <a href="#pack" class="btn btn-primary" id="modalConfirm" data-i18n="modal.ctaPack">Vai ai Pack</a>
+                    <button class="btn btn-secondary" id="modalCancel" data-i18n="modal.cancel">Chiudi</button>
                 </div>
             </div>
         </div>
@@ -794,12 +1031,11 @@
 
     <!-- PWA Service Worker Registration -->
     <script>
-        // Register Service Worker
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', function() {
                 navigator.serviceWorker.register('/sw.js')
                     .then(function(registration) {
-                        console.log('✅ Service Worker registered successfully:', registration.scope);
+                        console.log('✅ Service Worker registered:', registration.scope);
                     })
                     .catch(function(error) {
                         console.error('❌ Service Worker registration failed:', error);

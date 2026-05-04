@@ -3,7 +3,7 @@
  * Handles caching and offline functionality
  */
 
-const CACHE_NAME = 'Healody-landing-v1';
+const CACHE_NAME = 'Healody-landing-v5';
 const RUNTIME_CACHE = 'Healody-runtime';
 
 // Assets to cache on install

@@ -1,0 +1,11 @@
+# Healody™ — robots.txt
+# Production landing for Pack Standalone + PWA (coming soon)
+
+User-agent: *
+Allow: /
+
+# Disallow placeholder/internal-only paths if any are added in the future:
+# Disallow: /admin/
+# Disallow: /draft/
+
+Sitemap: https://healody.com/sitemap.xml

@@ -1,58 +1,52 @@
 /**
  * Healody Landing Page - Main JavaScript
- * Handles: Language switching, animations, modals, device detection
+ * Handles: Language switching, animations, PWA coming-soon modal,
+ *          smooth scroll, GDPR cookie banner.
  */
 
 // ============================================
 // GLOBAL STATE
 // ============================================
 let currentLang = 'it';
-const APP_URL = 'https://app.Healody.net';
-let deferredPrompt = null; // Store PWA install prompt
+
+// Toggle this to true when adding any analytics or marketing script
+// (Google Analytics, Meta Pixel, etc). The banner will appear automatically
+// at first visit and remember the user's choice in localStorage.
+const HAS_TRACKING_SCRIPTS = false;
+
+const CONSENT_KEY = 'Healody_cookie_consent'; // values: 'accepted' | 'rejected'
 
 // ============================================
 // INITIALIZATION
 // ============================================
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize language
     initializeLanguage();
-
-    // Initialize UI components
     initializeNavbar();
     initializeLanguageSwitcher();
     initializeFAQ();
     initializeScrollAnimations();
-    initializeCTAButtons();
+    initializePwaSoonCTA();
     initializeModal();
     initializeSmoothScroll();
-
-    // Initialize PWA install prompt
-    initializePWAInstall();
+    initializeCookieBanner();
 });
 
 // ============================================
 // LANGUAGE SYSTEM
 // ============================================
 function initializeLanguage() {
-    // Check localStorage first
     const savedLang = localStorage.getItem('Healody_lang');
 
     if (savedLang && ['it', 'en'].includes(savedLang)) {
         currentLang = savedLang;
     } else {
-        // Auto-detect from browser
         const browserLang = navigator.language.slice(0, 2);
         currentLang = ['it', 'en'].includes(browserLang) ? browserLang : 'it';
         localStorage.setItem('Healody_lang', currentLang);
     }
 
-    // Update HTML lang attribute
     document.documentElement.lang = currentLang;
-
-    // Apply translations
     applyTranslations();
-
-    // Update language button
     updateLanguageButton();
 }
 
@@ -101,18 +95,15 @@ function initializeLanguageSwitcher() {
 
     if (!langBtn || !langDropdown) return;
 
-    // Toggle dropdown
     langBtn.addEventListener('click', function(e) {
         e.stopPropagation();
         langDropdown.classList.toggle('active');
     });
 
-    // Close dropdown when clicking outside
     document.addEventListener('click', function() {
         langDropdown.classList.remove('active');
     });
 
-    // Language selection
     langOptions.forEach(option => {
         option.addEventListener('click', function(e) {
             e.stopPropagation();
@@ -140,30 +131,21 @@ function initializeNavbar() {
     const mobileMenuToggle = document.getElementById('mobileMenuToggle');
     const navbarMenu = document.getElementById('navbarMenu');
 
-    // Navbar scroll effect
-    let lastScroll = 0;
-
     window.addEventListener('scroll', function() {
         const currentScroll = window.pageYOffset;
-
-        // Add shadow on scroll
         if (currentScroll > 10) {
             navbar.style.boxShadow = '0 4px 16px rgba(0, 0, 0, 0.12)';
         } else {
             navbar.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.08)';
         }
-
-        lastScroll = currentScroll;
     });
 
-    // Mobile menu toggle
     if (mobileMenuToggle && navbarMenu) {
         mobileMenuToggle.addEventListener('click', function() {
             navbarMenu.classList.toggle('active');
             this.classList.toggle('active');
         });
 
-        // Close menu when clicking on a link
         const navLinks = navbarMenu.querySelectorAll('.nav-link');
         navLinks.forEach(link => {
             link.addEventListener('click', function() {
@@ -172,7 +154,6 @@ function initializeNavbar() {
             });
         });
 
-        // Close menu when clicking outside
         document.addEventListener('click', function(e) {
             if (!navbar.contains(e.target) && navbarMenu.classList.contains('active')) {
                 navbarMenu.classList.remove('active');
@@ -192,7 +173,6 @@ function initializeSmoothScroll() {
         link.addEventListener('click', function(e) {
             const href = this.getAttribute('href');
 
-            // Skip if href is just "#"
             if (href === '#') {
                 e.preventDefault();
                 window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -232,7 +212,6 @@ function initializeScrollAnimations() {
         });
     }, observerOptions);
 
-    // Observe all fade-in elements
     const fadeElements = document.querySelectorAll('.fade-in-up');
     fadeElements.forEach(el => observer.observe(el));
 }
@@ -248,14 +227,12 @@ function initializeFAQ() {
             const faqItem = this.parentElement;
             const isActive = faqItem.classList.contains('active');
 
-            // Close all other FAQs
             document.querySelectorAll('.faq-item').forEach(item => {
                 if (item !== faqItem) {
                     item.classList.remove('active');
                 }
             });
 
-            // Toggle current FAQ
             if (isActive) {
                 faqItem.classList.remove('active');
             } else {
@@ -266,273 +243,142 @@ function initializeFAQ() {
 }
 
 // ============================================
-// CTA BUTTONS & INSTALL MODAL
+// PWA COMING-SOON CTA
+// The "Install App" button in the PWA section is informational only:
+// the app isn't published yet — clicking opens a modal that explains
+// the launch is imminent and redirects users to the available Packs.
 // ============================================
-function initializeCTAButtons() {
-    const ctaButtons = [
-        document.getElementById('ctaInstallHero'),
-        document.getElementById('ctaInstallFinal')
-    ];
+function initializePwaSoonCTA() {
+    const ctaBtn = document.getElementById('ctaInstallPwa');
+    if (!ctaBtn) return;
 
-    ctaButtons.forEach(btn => {
-        if (btn) {
-            btn.addEventListener('click', function() {
-                openInstallModal();
-            });
-        }
+    ctaBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        openPwaSoonModal();
     });
 }
 
 function initializeModal() {
-    const modal = document.getElementById('installModal');
+    const modal = document.getElementById('pwaSoonModal');
     const modalClose = document.getElementById('modalClose');
     const modalCancel = document.getElementById('modalCancel');
     const modalConfirm = document.getElementById('modalConfirm');
     const modalOverlay = document.querySelector('.modal-overlay');
 
-    // Close modal handlers
+    if (!modal) return;
+
     [modalClose, modalCancel, modalOverlay].forEach(el => {
         if (el) {
-            el.addEventListener('click', closeInstallModal);
+            el.addEventListener('click', closePwaSoonModal);
         }
     });
 
-    // Confirm button
     if (modalConfirm) {
         modalConfirm.addEventListener('click', function() {
-            window.open(APP_URL, '_blank');
-            closeInstallModal();
+            closePwaSoonModal();
         });
     }
 
-    // ESC key to close
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape' && modal.classList.contains('active')) {
-            closeInstallModal();
+            closePwaSoonModal();
         }
     });
 }
 
-async function openInstallModal() {
-    // Check if PWA is already installed
-    if (isPWAInstalled()) {
-        console.log('✅ PWA already installed, redirecting to app');
-        window.open(APP_URL, '_blank');
-        return;
-    }
-
-    // Try native PWA install first (for Android and desktop Chrome)
-    if (deferredPrompt) {
-        console.log('🚀 Triggering native PWA install');
-        const installed = await triggerPWAInstall();
-
-        if (installed) {
-            console.log('✅ User accepted PWA installation');
-            return;
-        } else {
-            console.log('❌ User declined PWA installation');
-            // Continue to show modal with instructions
-        }
-    }
-
-    // For iOS or when native prompt is not available, show modal with instructions
-    const modal = document.getElementById('installModal');
-    const deviceInfo = detectDevice();
-
-    // Populate modal with device-specific info
-    populateModalContent(deviceInfo);
-
-    // Show modal
+function openPwaSoonModal() {
+    const modal = document.getElementById('pwaSoonModal');
+    if (!modal) return;
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
 }
 
-function closeInstallModal() {
-    const modal = document.getElementById('installModal');
+function closePwaSoonModal() {
+    const modal = document.getElementById('pwaSoonModal');
+    if (!modal) return;
     modal.classList.remove('active');
     document.body.style.overflow = '';
 }
 
-function detectDevice() {
-    const userAgent = navigator.userAgent.toLowerCase();
+// ============================================
+// COOKIE BANNER (GDPR)
+// Shown only if HAS_TRACKING_SCRIPTS is true AND no choice persisted yet.
+// "Manage cookies" footer link always re-opens the banner regardless.
+// ============================================
+function initializeCookieBanner() {
+    const banner = document.getElementById('cookieBanner');
+    const acceptBtn = document.getElementById('cookieAcceptBtn');
+    const rejectBtn = document.getElementById('cookieRejectBtn');
+    const manageBtn = document.getElementById('manageCookiesBtn');
 
-    if (/iphone|ipad|ipod/.test(userAgent)) {
-        return {
-            type: 'ios',
-            name: 'iOS'
-        };
-    } else if (/android/.test(userAgent)) {
-        return {
-            type: 'android',
-            name: 'Android'
-        };
-    } else {
-        return {
-            type: 'desktop',
-            name: 'Desktop'
-        };
+    if (!banner) return;
+
+    const stored = localStorage.getItem(CONSENT_KEY);
+
+    if (HAS_TRACKING_SCRIPTS && !stored) {
+        showCookieBanner();
     }
-}
 
-function populateModalContent(deviceInfo) {
-    const modalDeviceInfo = document.getElementById('modalDeviceInfo');
-    const modalInstructions = document.getElementById('modalInstructions');
-
-    if (!modalDeviceInfo || !modalInstructions) return;
-
-    const deviceType = deviceInfo.type;
-    const modalData = translations[currentLang].modal[deviceType];
-
-    // Set device info
-    modalDeviceInfo.textContent = modalData.detected;
-
-    // Set instructions
-    let instructionsHTML = '<ol>';
-    modalData.instructions.forEach(instruction => {
-        instructionsHTML += `<li>${instruction}</li>`;
-    });
-    instructionsHTML += '</ol>';
-
-    modalInstructions.innerHTML = instructionsHTML;
-}
-
-// ============================================
-// UTILITY FUNCTIONS
-// ============================================
-
-/**
- * Debounce function to limit execution rate
- */
-function debounce(func, wait) {
-    let timeout;
-    return function executedFunction(...args) {
-        const later = () => {
-            clearTimeout(timeout);
-            func(...args);
-        };
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-    };
-}
-
-/**
- * Check if element is in viewport
- */
-function isInViewport(element) {
-    const rect = element.getBoundingClientRect();
-    return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-}
-
-// ============================================
-// ANALYTICS (Optional - for future)
-// ============================================
-
-/**
- * Track CTA clicks
- */
-function trackCTAClick(ctaLocation) {
-    // Placeholder for analytics
-    console.log('CTA clicked:', ctaLocation);
-
-    // Future: Send to analytics service
-    // gtag('event', 'cta_click', { location: ctaLocation });
-}
-
-/**
- * Track language change
- */
-function trackLanguageChange(fromLang, toLang) {
-    // Placeholder for analytics
-    console.log('Language changed:', fromLang, '→', toLang);
-
-    // Future: Send to analytics service
-    // gtag('event', 'language_change', { from: fromLang, to: toLang });
-}
-
-// ============================================
-// PERFORMANCE OPTIMIZATIONS
-// ============================================
-
-/**
- * Lazy load images (if needed in future)
- */
-function lazyLoadImages() {
-    const images = document.querySelectorAll('img[data-src]');
-
-    const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-                img.src = img.dataset.src;
-                img.removeAttribute('data-src');
-                observer.unobserve(img);
-            }
+    if (acceptBtn) {
+        acceptBtn.addEventListener('click', function() {
+            localStorage.setItem(CONSENT_KEY, 'accepted');
+            hideCookieBanner();
+            applyConsent('accepted');
         });
-    });
-
-    images.forEach(img => imageObserver.observe(img));
-}
-
-// ============================================
-// PWA INSTALL FUNCTIONALITY
-// ============================================
-
-/**
- * Initialize PWA install prompt handling
- */
-function initializePWAInstall() {
-    // Capture the beforeinstallprompt event
-    window.addEventListener('beforeinstallprompt', (e) => {
-        console.log('💾 PWA install prompt available');
-        // Prevent the mini-infobar from appearing on mobile
-        e.preventDefault();
-        // Store the event so it can be triggered later
-        deferredPrompt = e;
-    });
-
-    // Listen for app installed event
-    window.addEventListener('appinstalled', () => {
-        console.log('✅ PWA installed successfully');
-        deferredPrompt = null;
-    });
-}
-
-/**
- * Trigger PWA installation
- */
-async function triggerPWAInstall() {
-    if (!deferredPrompt) {
-        console.log('❌ PWA install prompt not available');
-        // Fallback: redirect to app
-        window.open(APP_URL, '_blank');
-        return false;
     }
 
-    // Show the install prompt
-    deferredPrompt.prompt();
+    if (rejectBtn) {
+        rejectBtn.addEventListener('click', function() {
+            localStorage.setItem(CONSENT_KEY, 'rejected');
+            hideCookieBanner();
+            applyConsent('rejected');
+        });
+    }
 
-    // Wait for the user's response
-    const { outcome } = await deferredPrompt.userChoice;
-    console.log(`User response to install prompt: ${outcome}`);
+    if (manageBtn) {
+        manageBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            showCookieBanner();
+        });
+    }
 
-    // Clear the deferred prompt
-    deferredPrompt = null;
+    if (HAS_TRACKING_SCRIPTS && stored) {
+        applyConsent(stored);
+    }
+}
 
-    return outcome === 'accepted';
+function showCookieBanner() {
+    const banner = document.getElementById('cookieBanner');
+    if (!banner) return;
+    banner.hidden = false;
+    requestAnimationFrame(() => banner.classList.add('visible'));
+}
+
+function hideCookieBanner() {
+    const banner = document.getElementById('cookieBanner');
+    if (!banner) return;
+    banner.classList.remove('visible');
+    setTimeout(() => { banner.hidden = true; }, 300);
 }
 
 /**
- * Check if PWA is already installed
+ * Applies the stored consent choice. Called both on initial load (when a
+ * choice already exists) and after the user clicks Accept/Reject.
+ *
+ * Hook your tracking-script loaders here. For example:
+ *
+ *   if (decision === 'accepted') {
+ *       loadGoogleAnalytics();
+ *       loadMetaPixel();
+ *   }
  */
-function isPWAInstalled() {
-    // Check if running in standalone mode (PWA is installed)
-    return window.matchMedia('(display-mode: standalone)').matches ||
-           window.navigator.standalone === true;
+function applyConsent(decision) {
+    if (decision === 'accepted') {
+        // TODO: load analytics / marketing scripts here
+        console.log('[Consent] User accepted analytics cookies');
+    } else {
+        console.log('[Consent] User rejected analytics cookies');
+    }
 }
 
 // ============================================
@@ -541,19 +387,18 @@ function isPWAInstalled() {
 if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
     console.log('🎵 Healody Landing Page - Debug Mode');
     console.log('Current Language:', currentLang);
-    console.log('Device:', detectDevice());
-    console.log('PWA Installed:', isPWAInstalled());
 
-    // Expose functions to window for debugging
     window.HealodyDebug = {
         changeLang: function(lang) {
             currentLang = lang;
+            localStorage.setItem('Healody_lang', currentLang);
             applyTranslations();
             updateLanguageButton();
         },
-        showModal: openInstallModal,
-        detectDevice: detectDevice,
-        installPWA: triggerPWAInstall,
-        isPWAInstalled: isPWAInstalled
+        showPwaSoonModal: openPwaSoonModal,
+        closePwaSoonModal: closePwaSoonModal,
+        showCookieBanner: showCookieBanner,
+        hideCookieBanner: hideCookieBanner,
+        clearConsent: function() { localStorage.removeItem(CONSENT_KEY); }
     };
 }
