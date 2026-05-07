@@ -117,6 +117,8 @@
         }
     }
 
+    const DESCRIPTION_TRUNCATE_AT = 100;
+
     function buildPackCard(pack) {
         const card = document.createElement('article');
         card.className = 'shop-card fade-in-up visible';
@@ -128,18 +130,6 @@
                    <span>${CATEGORY_ICON[pack.category] || '🎵'}</span>
                </div>`;
 
-        const beat = pack.binaural_info && pack.binaural_info.beat_freq
-            ? `<span class="shop-card-tag">${escapeHtml(String(pack.binaural_info.beat_freq))} Hz</span>`
-            : '';
-
-        const ambient = pack.ambient_name
-            ? `<span class="shop-card-tag shop-card-tag-ambient">🎧 ${escapeHtml(pack.ambient_name)}</span>`
-            : '';
-
-        const duration = pack.duration_minutes
-            ? `<span class="shop-card-tag">${Number(pack.duration_minutes)} min</span>`
-            : '';
-
         const price = pack.price_eur != null
             ? formatPrice(pack.price_eur, pack.currency || 'EUR')
             : '—';
@@ -148,16 +138,25 @@
             ? `<audio class="shop-card-preview" controls preload="none" src="${escapeAttr(pack.preview_url)}"></audio>`
             : '';
 
+        const subtitle = (pack.short_description || '').trim();
+        const fullDescription = (pack.description || '').trim();
+        const descriptionMarkup = renderTruncatedDescription(fullDescription);
+
+        const subtitleMarkup = subtitle
+            ? `<p class="shop-card-subtitle">${escapeHtml(subtitle)}</p>`
+            : '';
+
+        const duration = pack.duration_minutes
+            ? `<span class="shop-card-tag">⏱ ${Number(pack.duration_minutes)} min</span>`
+            : '';
+
         card.innerHTML = `
             ${cover}
             <div class="shop-card-body">
                 <h3 class="shop-card-title">${escapeHtml(pack.name)}</h3>
-                <p class="shop-card-desc">${escapeHtml(pack.short_description || '')}</p>
-                <div class="shop-card-tags">
-                    ${duration}
-                    ${beat}
-                    ${ambient}
-                </div>
+                ${subtitleMarkup}
+                ${duration ? `<div class="shop-card-meta">${duration}</div>` : ''}
+                ${descriptionMarkup}
                 ${preview}
                 <div class="shop-card-footer">
                     <span class="shop-card-price">${price}</span>
@@ -180,7 +179,46 @@
             openRedeemModal(pack.pack_id, pack.name);
         });
 
+        const readMore = card.querySelector('.shop-card-readmore');
+        if (readMore) {
+            readMore.addEventListener('click', function (e) {
+                e.preventDefault();
+                const wrap = this.closest('.shop-card-desc');
+                if (!wrap) return;
+                wrap.classList.add('is-expanded');
+                // Swap truncated text with full text and remove the link
+                const full = wrap.getAttribute('data-full') || '';
+                wrap.innerHTML = '<p class="shop-card-desc-text">' + escapeHtml(full) + '</p>';
+            });
+        }
+
         return card;
+    }
+
+    /**
+     * Build the description markup. If the description is short enough, render it
+     * inline. Otherwise emit a truncated preview (cut at the last word boundary
+     * within DESCRIPTION_TRUNCATE_AT chars) followed by an inline "…leggi di più"
+     * anchor; the click handler in buildPackCard expands the full text.
+     */
+    function renderTruncatedDescription(text) {
+        if (!text) return '';
+        if (text.length <= DESCRIPTION_TRUNCATE_AT) {
+            return `<div class="shop-card-desc"><p class="shop-card-desc-text">${escapeHtml(text)}</p></div>`;
+        }
+
+        // Cut at last whitespace before the limit to avoid mid-word truncation.
+        let cut = text.lastIndexOf(' ', DESCRIPTION_TRUNCATE_AT);
+        if (cut < DESCRIPTION_TRUNCATE_AT * 0.6) cut = DESCRIPTION_TRUNCATE_AT;
+        const preview = text.slice(0, cut).replace(/[.,;:\s]+$/, '');
+
+        // Store the full text as a data attribute (escaped) so the click handler
+        // can render it as plain text via textContent-equivalent escapeHtml.
+        return `
+            <div class="shop-card-desc" data-full="${escapeAttr(text)}">
+                <p class="shop-card-desc-text">${escapeHtml(preview)}…<a href="#" class="shop-card-readmore" data-i18n="shop.card.readMore">leggi di più</a></p>
+            </div>
+        `;
     }
 
     function showCatalogStatus(message, isError) {

@@ -19,7 +19,7 @@ const translations = {
             badge: "Due modi per ritrovare il benessere",
             headline: "Frequenze terapeutiche, in due forme",
             subheadline: "Scarica i nostri Pack audio standalone in alta qualità e usali subito sul tuo dispositivo. Oppure aspetta l'arrivo della PWA Healody™ per l'esperienza completa: libreria, statistiche e modalità offline.",
-            ctaPrimary: "Esplora i Pack",
+            ctaPrimary: "Esplora lo shop",
             ctaSecondary: "Scopri la PWA"
         },
 
@@ -47,7 +47,7 @@ const translations = {
             packBadge: "Disponibile",
             packTitle: "Pack Audio Standalone",
             packText: "File MP3 in alta qualità, scaricabili sul tuo dispositivo. Mix di frequenze binaurali e polinaurali con ambient sonoro studiato. Pronti all'uso, senza app, senza account.",
-            packCta: "Esplora i Pack",
+            packCta: "Esplora lo shop",
             pwaBadge: "Coming Soon",
             pwaTitle: "App Healody™",
             pwaText: "L'esperienza completa: libreria estesa di frequenze e protocolli, ascolto offline, statistiche personali e installazione come app sul tuo dispositivo. In arrivo.",
@@ -108,7 +108,7 @@ const translations = {
         // Shop (catalogo dinamico + checkout/codice)
         shop: {
             eyebrow: "Shop",
-            headline: "Healody Shop — Pack audio professionali",
+            headline: "Healody™ Shop — Pack audio professionali",
             subtitle: "Acquista con carta o riscatta un codice licenza. Download immediato via email.",
             loading: "Carico il catalogo…",
             empty: "Nessun pack disponibile al momento. Torna a trovarci presto.",
@@ -116,7 +116,7 @@ const translations = {
             errorCheckout: "Errore nell'avvio del checkout. Riprova tra qualche istante.",
             errorNetwork: "Connessione assente o server non raggiungibile. Riprova tra qualche istante.",
             errorGeneric: "Si è verificato un errore. Riprova.",
-            disclaimer: "Inserendo l'email accetti che venga utilizzata per inviare il link di download e ricevute d'acquisto, secondo la nostra Privacy Policy.",
+            disclaimer: "Inserendo l'email accetti che venga utilizzata per inviare il link di download, secondo la nostra Privacy Policy.",
             path: {
                 stripeTitle: "Compra con carta",
                 stripeDesc: "Pagamento sicuro via Stripe. Ricevi link di download per email entro pochi secondi.",
@@ -126,6 +126,9 @@ const translations = {
             action: {
                 buy: "💳 Compra",
                 redeem: "🎟 Codice"
+            },
+            card: {
+                readMore: "leggi di più"
             },
             redeem: {
                 title: "Riscatta il tuo codice",
@@ -298,7 +301,7 @@ const translations = {
         finalCta: {
             headline: "Inizia oggi il tuo percorso",
             subheadline: "Scarica un Pack adesso o aspetta l'arrivo dell'App. Scegli tu.",
-            ctaPack: "Esplora i Pack",
+            ctaPack: "Esplora lo shop",
             ctaPwa: "Scopri la PWA"
         },
 
@@ -317,7 +320,7 @@ const translations = {
         modal: {
             title: "App Healody™ — In arrivo",
             text: "L'App Healody™ è in fase di testing finale e sarà disponibile nelle prossime settimane. Nel frattempo puoi già scaricare i Pack Standalone e iniziare subito.",
-            ctaPack: "Vai ai Pack",
+            ctaPack: "Vai allo shop",
             cancel: "Chiudi"
         },
 
@@ -347,7 +350,7 @@ const translations = {
             badge: "Two ways to find your wellbeing",
             headline: "Therapeutic frequencies, in two forms",
             subheadline: "Download our standalone audio Packs in high quality and use them right away on any device. Or wait for the Healody™ PWA for the complete experience: full library, listening stats, and offline mode.",
-            ctaPrimary: "Explore Packs",
+            ctaPrimary: "Explore the shop",
             ctaSecondary: "Discover the PWA"
         },
 
@@ -375,7 +378,7 @@ const translations = {
             packBadge: "Available",
             packTitle: "Standalone Audio Packs",
             packText: "High-quality MP3 files you download to your device. A mix of binaural and polynaural frequencies layered with carefully designed ambient sound. Ready to use — no app, no account.",
-            packCta: "Explore Packs",
+            packCta: "Explore the shop",
             pwaBadge: "Coming Soon",
             pwaTitle: "Healody™ App",
             pwaText: "The full experience: extended library of frequencies and protocols, offline listening, personal stats, and installation as a native app on your device. Coming soon.",
@@ -436,7 +439,7 @@ const translations = {
         // Shop (dynamic catalog + checkout/code)
         shop: {
             eyebrow: "Shop",
-            headline: "Healody Shop — Professional audio packs",
+            headline: "Healody™ Shop — Professional audio packs",
             subtitle: "Buy with card or redeem a license code. Instant download via email.",
             loading: "Loading the catalog…",
             empty: "No packs available right now. Come back soon.",
@@ -454,6 +457,9 @@ const translations = {
             action: {
                 buy: "💳 Buy",
                 redeem: "🎟 Code"
+            },
+            card: {
+                readMore: "read more"
             },
             redeem: {
                 title: "Redeem your code",
@@ -626,7 +632,7 @@ const translations = {
         finalCta: {
             headline: "Start your journey today",
             subheadline: "Download a Pack now or wait for the App launch. Your call.",
-            ctaPack: "Explore Packs",
+            ctaPack: "Explore the shop",
             ctaPwa: "Discover the PWA"
         },
 
@@ -645,7 +651,7 @@ const translations = {
         modal: {
             title: "Healody™ App — Coming soon",
             text: "The Healody™ App is in final testing and will be available in the next few weeks. Meanwhile, you can already download the Standalone Packs and start right away.",
-            ctaPack: "Go to Packs",
+            ctaPack: "Go to shop",
             cancel: "Close"
         },
 
