@@ -108,6 +108,7 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/shop.css">
 </head>
 <body>
 
@@ -125,6 +126,7 @@
                 <!-- Desktop Menu -->
                 <ul class="navbar-menu" id="navbarMenu">
                     <li><a href="#pack" class="nav-link" data-i18n="nav.pack">Pack</a></li>
+                    <li><a href="#shop" class="nav-link" data-i18n="nav.shop">Shop</a></li>
                     <li><a href="#pwa" class="nav-link" data-i18n="nav.pwa">App</a></li>
                     <li><a href="#scienza" class="nav-link" data-i18n="nav.science">Scienza</a></li>
                     <li><a href="#faq" class="nav-link" data-i18n="nav.faq">FAQ</a></li>
@@ -520,6 +522,105 @@
             </p>
         </div>
     </section>
+
+    <!-- ============================================ -->
+    <!-- 6.5 SHOP (Catalogo dinamico + checkout/redeem) -->
+    <!-- ============================================ -->
+    <section class="shop-section" id="shop">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <span class="section-eyebrow shop-eyebrow" data-i18n="shop.eyebrow">Shop</span>
+                <h2 class="section-title" data-i18n="shop.headline">Healody Shop — Pack audio professionali</h2>
+                <p class="section-subtitle" data-i18n="shop.subtitle">
+                    Acquista con carta o riscatta un codice licenza. Download immediato via email.
+                </p>
+            </div>
+
+            <!-- Path switcher: Stripe / Codice -->
+            <div class="shop-paths fade-in-up">
+                <div class="shop-path">
+                    <span class="shop-path-icon" aria-hidden="true">💳</span>
+                    <h3 class="shop-path-title" data-i18n="shop.path.stripeTitle">Compra con carta</h3>
+                    <p class="shop-path-desc" data-i18n="shop.path.stripeDesc">
+                        Pagamento sicuro via Stripe. Ricevi link di download per email entro pochi secondi.
+                    </p>
+                </div>
+                <div class="shop-path-separator" aria-hidden="true"></div>
+                <div class="shop-path">
+                    <span class="shop-path-icon" aria-hidden="true">🎟️</span>
+                    <h3 class="shop-path-title" data-i18n="shop.path.codeTitle">Hai un codice?</h3>
+                    <p class="shop-path-desc" data-i18n="shop.path.codeDesc">
+                        Riscatta una licenza già attivata e ottieni subito il link al download.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Catalog status / loading / empty / error -->
+            <div class="shop-catalog-status" id="shopCatalogStatus">
+                <div class="shop-spinner" aria-hidden="true"></div>
+                <p class="shop-status-text" data-i18n="shop.loading">Carico il catalogo…</p>
+            </div>
+
+            <!-- Dynamic catalog grid -->
+            <div class="shop-grid" id="shopGrid" hidden></div>
+
+            <p class="shop-disclaimer fade-in-up" data-i18n="shop.disclaimer">
+                Inserendo l'email accetti che venga utilizzata per inviare il link di download e ricevute d'acquisto, secondo la nostra Privacy Policy.
+            </p>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SHOP — License Code Redeem Modal -->
+    <!-- ============================================ -->
+    <div class="modal" id="shopRedeemModal" aria-hidden="true">
+        <div class="modal-overlay"></div>
+        <div class="modal-content shop-modal-content">
+            <button class="modal-close" id="shopRedeemClose" aria-label="Chiudi">&times;</button>
+            <div class="modal-body">
+                <h3 class="modal-title" data-i18n="shop.redeem.title">Riscatta il tuo codice</h3>
+                <p class="shop-redeem-pack" id="shopRedeemPackName"></p>
+
+                <form class="shop-form" id="shopRedeemForm" novalidate>
+                    <label class="shop-field">
+                        <span class="shop-field-label" data-i18n="shop.redeem.emailLabel">Email</span>
+                        <input
+                            type="email"
+                            class="shop-input"
+                            id="shopRedeemEmail"
+                            required
+                            autocomplete="email"
+                            placeholder="tu@esempio.com">
+                    </label>
+                    <label class="shop-field">
+                        <span class="shop-field-label" data-i18n="shop.redeem.codeLabel">Codice licenza</span>
+                        <div class="shop-code-row">
+                            <input
+                                type="text"
+                                class="shop-input shop-input-code"
+                                id="shopRedeemCode"
+                                required
+                                autocomplete="off"
+                                spellcheck="false"
+                                maxlength="19"
+                                placeholder="XXXX-XXXX-XXXX-XXXX"
+                                pattern="[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}">
+                            <button type="button" class="btn btn-outline shop-btn-verify" id="shopRedeemVerify" disabled data-i18n="shop.redeem.verify">Verifica</button>
+                        </div>
+                        <span class="shop-field-hint" data-i18n="shop.redeem.codeHint">Formato: XXXX-XXXX-XXXX-XXXX</span>
+                        <div class="shop-verify-feedback" id="shopRedeemVerifyFeedback" hidden></div>
+                    </label>
+
+                    <div class="shop-form-error" id="shopRedeemError" hidden></div>
+
+                    <div class="modal-actions shop-form-actions">
+                        <button type="button" class="btn btn-outline" id="shopRedeemCancel" data-i18n="shop.redeem.cancel">Annulla</button>
+                        <button type="submit" class="btn btn-primary" id="shopRedeemSubmit" disabled data-i18n="shop.redeem.submit">Riscatta</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <!-- ============================================ -->
     <!-- 7. SCIENZA (Common to both products) -->
@@ -1028,6 +1129,7 @@
     <!-- Scripts -->
     <script src="js/translations.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/shop.js"></script>
 
     <!-- PWA Service Worker Registration -->
     <script>

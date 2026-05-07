@@ -8,6 +8,7 @@ const translations = {
         // Navigation
         nav: {
             pack: "Pack",
+            shop: "Shop",
             pwa: "App",
             science: "Scienza",
             faq: "FAQ"
@@ -102,6 +103,59 @@ const translations = {
             buyCta: "Acquista",
             comingSoon: "Disponibile a breve",
             footerNote: "I prezzi e i checkout saranno attivi al lancio dello shop. Catalogo in espansione."
+        },
+
+        // Shop (catalogo dinamico + checkout/codice)
+        shop: {
+            eyebrow: "Shop",
+            headline: "Healody Shop — Pack audio professionali",
+            subtitle: "Acquista con carta o riscatta un codice licenza. Download immediato via email.",
+            loading: "Carico il catalogo…",
+            empty: "Nessun pack disponibile al momento. Torna a trovarci presto.",
+            errorLoad: "Impossibile caricare il catalogo. Riprova tra qualche istante.",
+            errorCheckout: "Errore nell'avvio del checkout. Riprova tra qualche istante.",
+            errorNetwork: "Connessione assente o server non raggiungibile. Riprova tra qualche istante.",
+            errorGeneric: "Si è verificato un errore. Riprova.",
+            disclaimer: "Inserendo l'email accetti che venga utilizzata per inviare il link di download e ricevute d'acquisto, secondo la nostra Privacy Policy.",
+            path: {
+                stripeTitle: "Compra con carta",
+                stripeDesc: "Pagamento sicuro via Stripe. Ricevi link di download per email entro pochi secondi.",
+                codeTitle: "Hai un codice?",
+                codeDesc: "Riscatta una licenza già attivata e ottieni subito il link al download."
+            },
+            action: {
+                buy: "💳 Compra",
+                redeem: "🎟 Codice"
+            },
+            redeem: {
+                title: "Riscatta il tuo codice",
+                emailLabel: "Email",
+                codeLabel: "Codice licenza",
+                codeHint: "Formato: XXXX-XXXX-XXXX-XXXX. Premi Verifica per controllare i riscatti disponibili.",
+                cancel: "Annulla",
+                verify: "Verifica",
+                submit: "Riscatta",
+                errorEmail: "Inserisci un indirizzo email valido.",
+                errorCodeFormat: "Codice licenza non valido (formato XXXX-XXXX-XXXX-XXXX).",
+                errorVerifyGeneric: "Impossibile verificare il codice. Riprova.",
+                verifyOk: "Hai ancora {n} di {total} riscatti su questo codice.",
+                verifyExhausted: "Licenza esaurita: 0 di {total} riscatti disponibili."
+            },
+            errorCode: {
+                invalid_format: "Codice licenza non valido (formato XXXX-XXXX-XXXX-XXXX).",
+                license_not_found: "Codice licenza non trovato.",
+                license_inactive: "Licenza non attiva.",
+                license_expired: "Licenza scaduta.",
+                license_exhausted: "Licenza esaurita: nessun riscatto disponibile.",
+                email_mismatch: "Email non corrisponde a quella della licenza.",
+                invalid_email: "Email non valida.",
+                invalid_pack: "Pack non valido.",
+                pack_unavailable: "Pack non disponibile.",
+                pack_no_render: "Pack non ancora pronto al download.",
+                race_condition: "Riprova: un'altra richiesta sta usando lo stesso credito.",
+                internal_error: "Errore interno. Riprova più tardi.",
+                method_not_allowed: "Metodo non consentito."
+            }
         },
 
         // Categories
@@ -282,6 +336,7 @@ const translations = {
         // Navigation
         nav: {
             pack: "Packs",
+            shop: "Shop",
             pwa: "App",
             science: "Science",
             faq: "FAQ"
@@ -376,6 +431,59 @@ const translations = {
             buyCta: "Buy",
             comingSoon: "Available soon",
             footerNote: "Prices and checkout will go live at shop launch. Catalog growing."
+        },
+
+        // Shop (dynamic catalog + checkout/code)
+        shop: {
+            eyebrow: "Shop",
+            headline: "Healody Shop — Professional audio packs",
+            subtitle: "Buy with card or redeem a license code. Instant download via email.",
+            loading: "Loading the catalog…",
+            empty: "No packs available right now. Come back soon.",
+            errorLoad: "Couldn't load the catalog. Please try again shortly.",
+            errorCheckout: "Could not start checkout. Please try again shortly.",
+            errorNetwork: "No connection or server unreachable. Please try again shortly.",
+            errorGeneric: "Something went wrong. Please try again.",
+            disclaimer: "By entering your email you agree it will be used to send the download link and purchase receipts, per our Privacy Policy.",
+            path: {
+                stripeTitle: "Buy with card",
+                stripeDesc: "Secure payment via Stripe. Get the download link by email within seconds.",
+                codeTitle: "Got a code?",
+                codeDesc: "Redeem an already-activated license and get the download link right away."
+            },
+            action: {
+                buy: "💳 Buy",
+                redeem: "🎟 Code"
+            },
+            redeem: {
+                title: "Redeem your code",
+                emailLabel: "Email",
+                codeLabel: "License code",
+                codeHint: "Format: XXXX-XXXX-XXXX-XXXX. Click Verify to check available redemptions.",
+                cancel: "Cancel",
+                verify: "Verify",
+                submit: "Redeem",
+                errorEmail: "Please enter a valid email address.",
+                errorCodeFormat: "Invalid license code (format XXXX-XXXX-XXXX-XXXX).",
+                errorVerifyGeneric: "Could not verify the code. Please try again.",
+                verifyOk: "You still have {n} of {total} redemptions left on this code.",
+                verifyExhausted: "License exhausted: 0 of {total} redemptions left."
+            },
+            errorCode: {
+                invalid_format: "Invalid license code (format XXXX-XXXX-XXXX-XXXX).",
+                license_not_found: "License code not found.",
+                license_inactive: "License is not active.",
+                license_expired: "License has expired.",
+                license_exhausted: "License exhausted: no redemptions left.",
+                email_mismatch: "Email does not match the one bound to this license.",
+                invalid_email: "Invalid email address.",
+                invalid_pack: "Invalid pack.",
+                pack_unavailable: "Pack unavailable.",
+                pack_no_render: "Pack not yet ready for download.",
+                race_condition: "Please retry: another request is using the same credit.",
+                internal_error: "Internal error. Please try again later.",
+                method_not_allowed: "Method not allowed."
+            }
         },
 
         // Categories

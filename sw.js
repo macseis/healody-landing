@@ -3,7 +3,7 @@
  * Handles caching and offline functionality
  */
 
-const CACHE_NAME = 'Healody-landing-v5';
+const CACHE_NAME = 'Healody-landing-v6';
 const RUNTIME_CACHE = 'Healody-runtime';
 
 // Assets to cache on install
@@ -12,8 +12,10 @@ const STATIC_ASSETS = [
     '/index.html',
     '/manifest.json',
     '/css/styles.css',
+    '/css/shop.css',
     '/js/main.js',
     '/js/translations.js',
+    '/js/shop.js',
     '/images/logo-full.svg',
     '/images/logo-icon.svg',
     '/images/favicon.svg'

@@ -111,7 +111,7 @@ cache/
 README.md
 !.github/*.md
 !PROJECT_CONTEXT.md
-!CLAUDE.md
+# CLAUDE.md NON tracciato — repo è pubblico, evitiamo di esporre config AI
 
 # ============================================
 # Development & Test Directories
