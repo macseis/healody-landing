@@ -50,6 +50,12 @@
 
         bindModals();
         loadCatalog();
+
+        // Reload catalog when the user switches language so product copy
+        // (name, subtitle, description) comes back in the right language.
+        document.addEventListener('healody:langchange', function () {
+            loadCatalog();
+        });
     });
 
     // bfcache restore: when the user clicks back from the backend success page,
@@ -71,8 +77,19 @@
         const status = document.getElementById('shopCatalogStatus');
         const grid = document.getElementById('shopGrid');
 
+        // Restore the loading state (spinner + localized "Loading…" text) every
+        // time we (re)load the catalog — including after a language switch.
+        if (status) {
+            status.innerHTML =
+                '<div class="shop-spinner" aria-hidden="true"></div>' +
+                '<p class="shop-status-text">' + escapeHtml(t('shop.loading')) + '</p>';
+            status.hidden = false;
+            grid.hidden = true;
+        }
+
         try {
-            const response = await fetch(SHOP_API + '/catalog.php', {
+            const url = SHOP_API + '/catalog.php?lang=' + encodeURIComponent(getCurrentLang());
+            const response = await fetch(url, {
                 method: 'GET',
                 headers: { 'Accept': 'application/json' }
             });
@@ -250,7 +267,7 @@
                     'Accept': 'application/json',
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ pack_id: packId })
+                body: JSON.stringify({ pack_id: packId, lang: getCurrentLang() })
             });
 
             const data = await response.json().catch(function () { return null; });
@@ -497,7 +514,8 @@
             // server-side rendered counter + reload-after-download logic).
             const successUrl = SHOP_SUCCESS_URL
                 + '?order_id=' + encodeURIComponent(data.order_id)
-                + '&token=' + encodeURIComponent(data.download_token);
+                + '&token=' + encodeURIComponent(data.download_token)
+                + '&lang=' + encodeURIComponent(getCurrentLang());
             window.location.href = successUrl;
         } catch (err) {
             console.error('[Shop] redeem failed:', err);

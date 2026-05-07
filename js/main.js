@@ -116,6 +116,12 @@ function initializeLanguageSwitcher() {
 
                 applyTranslations();
                 updateLanguageButton();
+
+                // Notify modules that listen for language changes (e.g. shop.js
+                // reloads the catalog so product copy comes back localized).
+                document.dispatchEvent(new CustomEvent('healody:langchange', {
+                    detail: { lang: currentLang }
+                }));
             }
 
             langDropdown.classList.remove('active');
