@@ -7,7 +7,6 @@ const translations = {
     it: {
         // Navigation
         nav: {
-            pack: "Pack",
             shop: "Shop",
             pwa: "App",
             science: "Scienza",
@@ -52,57 +51,6 @@ const translations = {
             pwaTitle: "App Healody™",
             pwaText: "L'esperienza completa: libreria estesa di frequenze e protocolli, ascolto offline, statistiche personali e installazione come app sul tuo dispositivo. In arrivo.",
             pwaCta: "Scopri la PWA"
-        },
-
-        // Pack Standalone Section
-        pack: {
-            headline: "Pack Audio Standalone",
-            subtitle: "Mixati a regola d'arte, normalizzati a -18 LUFS, pronti da scaricare",
-            featuresTitle: "Cosa contiene ogni Pack",
-            feature1Title: "Frequenze terapeutiche",
-            feature1Desc: "Mix di frequenze binaurali e polinaurali sovrapposte ad ambient sonoro studiato per amplificarne l'effetto.",
-            feature2Title: "Audio HD",
-            feature2Desc: "MP3 a 320 kbps, masterizzato a -18 LUFS integrato e -1 dBFS true peak. Volume coerente tra tutti i pack.",
-            feature3Title: "Loop senza tagli",
-            feature3Desc: "Ogni pack è un singolo file in loop continuo, senza interruzioni o cambi bruschi durante la sessione.",
-            feature4Title: "Pronto all'uso",
-            feature4Desc: "Nessuna app richiesta. Scarica, riproduci sul tuo player preferito, indossa le cuffie.",
-            catalogTitle: "Il catalogo",
-            catalogSubtitle: "Pack tematici per ogni esigenza",
-            sleep: {
-                name: "Sleep Pack",
-                description: "Frequenze delta e theta con ambient notturno. Per addormentarsi e mantenere il sonno profondo."
-            },
-            focus: {
-                name: "Focus Pack",
-                description: "Frequenze beta e gamma con ambient minimal. Per studio, lavoro e attività cognitive intense."
-            },
-            calm: {
-                name: "Calm Pack",
-                description: "Frequenze alpha con ambient naturale. Per ridurre ansia e tensione durante la giornata."
-            },
-            energy: {
-                name: "Energy Pack",
-                description: "Frequenze beta con ambient ritmico. Per ricarica energetica e inizio giornata."
-            },
-            meditation: {
-                name: "Meditation Pack",
-                description: "Frequenze theta con ambient meditativo. Per pratica meditativa e introspezione profonda."
-            },
-            recovery: {
-                name: "Recovery Pack",
-                description: "Frequenze delta con ambient avvolgente. Per recupero fisico e rigenerazione."
-            },
-            allInOne: {
-                badge: "Bundle Completo",
-                name: "All-in-One Bundle",
-                description: "Tutti e 6 i pack in un'unica soluzione. Include in omaggio una guida PDF dedicata: come usare ogni pack, in quali momenti della giornata, abbinamenti consigliati e protocolli d'uso.",
-                bonus: "+ Guida PDF in regalo"
-            },
-            duration: "Loop continuo",
-            buyCta: "Acquista",
-            comingSoon: "Disponibile a breve",
-            footerNote: "I prezzi e i checkout saranno attivi al lancio dello shop. Catalogo in espansione."
         },
 
         // Shop (catalogo dinamico + checkout/codice)
@@ -292,8 +240,12 @@ const translations = {
                 answer: "Sì, le frequenze audio sono completamente sicure e naturali. Non hanno effetti collaterali e possono essere utilizzate da chiunque. In caso di dubbi o condizioni mediche specifiche, consulta il tuo medico."
             },
             q8: {
-                question: "Cos'è la guida PDF dell'All-in-One Bundle?",
-                answer: "Una guida illustrata che ti accompagna nell'uso dei sei pack: in quali momenti della giornata usare ognuno, abbinamenti consigliati, protocolli per obiettivi specifici (riduzione stress, miglioramento sonno, concentrazione prolungata) e consigli pratici per la sessione. È inclusa solo nel Bundle."
+                question: "Come acquisto un Pack sullo shop?",
+                answer: "Vai nella sezione Shop, scegli il pack che ti interessa e clicca \"Compra con carta\". Verrai reindirizzato a Stripe per il pagamento sicuro. Subito dopo il pagamento riceverai una email con il link di download del file MP3, valido 72 ore e fino a 5 download. La pagina di conferma mostra anche il link cliccabile per scaricare subito."
+            },
+            q9: {
+                question: "Ho un codice licenza, come lo uso?",
+                answer: "Nello shop, sul pack che vuoi scaricare, clicca \"Codice\". Si apre un modulo: inserisci la tua email, incolla il codice (formato XXXX-XXXX-XXXX-XXXX) e premi \"Verifica\" per controllare quanti riscatti hai ancora. Se la verifica è OK, premi \"Riscatta\" e riceverai email + link di download. Ogni riscatto consuma un credito del codice e crea un nuovo link valido 72 ore con max 5 download."
             }
         },
 
@@ -338,7 +290,6 @@ const translations = {
     en: {
         // Navigation
         nav: {
-            pack: "Packs",
             shop: "Shop",
             pwa: "App",
             science: "Science",
@@ -385,56 +336,6 @@ const translations = {
             pwaCta: "Discover the PWA"
         },
 
-        // Pack Standalone Section
-        pack: {
-            headline: "Standalone Audio Packs",
-            subtitle: "Professionally mixed, normalized to -18 LUFS, ready to download",
-            featuresTitle: "What's inside every Pack",
-            feature1Title: "Therapeutic frequencies",
-            feature1Desc: "A mix of binaural and polynaural frequencies layered over ambient sound carefully designed to amplify their effect.",
-            feature2Title: "HD audio",
-            feature2Desc: "320 kbps MP3, mastered at -18 LUFS integrated and -1 dBFS true peak. Consistent volume across all packs.",
-            feature3Title: "Seamless loop",
-            feature3Desc: "Each pack is a single, continuously looped file — no interruptions or abrupt changes during your session.",
-            feature4Title: "Ready to use",
-            feature4Desc: "No app required. Download, play in your favorite player, put on your headphones.",
-            catalogTitle: "The catalog",
-            catalogSubtitle: "Themed packs for every need",
-            sleep: {
-                name: "Sleep Pack",
-                description: "Delta and theta frequencies with night ambient. To fall asleep and maintain deep sleep."
-            },
-            focus: {
-                name: "Focus Pack",
-                description: "Beta and gamma frequencies with minimal ambient. For study, work, and intense cognitive tasks."
-            },
-            calm: {
-                name: "Calm Pack",
-                description: "Alpha frequencies with natural ambient. To ease anxiety and tension during the day."
-            },
-            energy: {
-                name: "Energy Pack",
-                description: "Beta frequencies with rhythmic ambient. For energy boost and starting your day right."
-            },
-            meditation: {
-                name: "Meditation Pack",
-                description: "Theta frequencies with meditative ambient. For meditation practice and deep introspection."
-            },
-            recovery: {
-                name: "Recovery Pack",
-                description: "Delta frequencies with enveloping ambient. For physical recovery and regeneration."
-            },
-            allInOne: {
-                badge: "Complete Bundle",
-                name: "All-in-One Bundle",
-                description: "All 6 packs in a single solution. Includes a free dedicated PDF guide: how to use each pack, when during the day, recommended pairings, and use protocols.",
-                bonus: "+ Free PDF guide"
-            },
-            duration: "Continuous loop",
-            buyCta: "Buy",
-            comingSoon: "Available soon",
-            footerNote: "Prices and checkout will go live at shop launch. Catalog growing."
-        },
 
         // Shop (dynamic catalog + checkout/code)
         shop: {
@@ -623,8 +524,12 @@ const translations = {
                 answer: "Yes, audio frequencies are completely safe and natural. They have no side effects and can be used by anyone. If in doubt or with specific medical conditions, consult your doctor."
             },
             q8: {
-                question: "What is the All-in-One Bundle PDF guide?",
-                answer: "An illustrated guide that walks you through the six packs: when during the day to use each, recommended pairings, protocols for specific goals (stress reduction, sleep improvement, sustained focus), and practical session tips. Included only with the Bundle."
+                question: "How do I buy a Pack from the shop?",
+                answer: "Go to the Shop section, pick the pack you want and click \"Buy with card\". You'll be redirected to Stripe for secure payment. Right after payment you'll get an email with the MP3 download link, valid for 72 hours and up to 5 downloads. The confirmation page also shows the clickable download button."
+            },
+            q9: {
+                question: "I have a license code — how do I use it?",
+                answer: "In the shop, on the pack you want to download, click \"Code\". A form opens: enter your email, paste the code (format XXXX-XXXX-XXXX-XXXX) and press \"Verify\" to check how many redemptions are left. If verification passes, press \"Redeem\" and you'll receive email + download link. Each redemption uses one credit on the code and creates a fresh link valid 72 hours with max 5 downloads."
             }
         },
 
