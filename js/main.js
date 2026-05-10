@@ -1,7 +1,6 @@
 /**
  * Healody Landing Page - Main JavaScript
- * Handles: Language switching, animations, PWA coming-soon modal,
- *          smooth scroll, GDPR cookie banner.
+ * Handles: Language switching, animations, smooth scroll, GDPR cookie banner.
  */
 
 // ============================================
@@ -25,8 +24,6 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeLanguageSwitcher();
     initializeFAQ();
     initializeScrollAnimations();
-    initializePwaSoonCTA();
-    initializeModal();
     initializeSmoothScroll();
     initializeCookieBanner();
 });
@@ -249,64 +246,6 @@ function initializeFAQ() {
 }
 
 // ============================================
-// PWA COMING-SOON CTA
-// The "Install App" button in the PWA section is informational only:
-// the app isn't published yet — clicking opens a modal that explains
-// the launch is imminent and redirects users to the available Packs.
-// ============================================
-function initializePwaSoonCTA() {
-    const ctaBtn = document.getElementById('ctaInstallPwa');
-    if (!ctaBtn) return;
-
-    ctaBtn.addEventListener('click', function(e) {
-        e.preventDefault();
-        openPwaSoonModal();
-    });
-}
-
-function initializeModal() {
-    const modal = document.getElementById('pwaSoonModal');
-    const modalClose = document.getElementById('modalClose');
-    const modalCancel = document.getElementById('modalCancel');
-    const modalConfirm = document.getElementById('modalConfirm');
-    const modalOverlay = document.querySelector('.modal-overlay');
-
-    if (!modal) return;
-
-    [modalClose, modalCancel, modalOverlay].forEach(el => {
-        if (el) {
-            el.addEventListener('click', closePwaSoonModal);
-        }
-    });
-
-    if (modalConfirm) {
-        modalConfirm.addEventListener('click', function() {
-            closePwaSoonModal();
-        });
-    }
-
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && modal.classList.contains('active')) {
-            closePwaSoonModal();
-        }
-    });
-}
-
-function openPwaSoonModal() {
-    const modal = document.getElementById('pwaSoonModal');
-    if (!modal) return;
-    modal.classList.add('active');
-    document.body.style.overflow = 'hidden';
-}
-
-function closePwaSoonModal() {
-    const modal = document.getElementById('pwaSoonModal');
-    if (!modal) return;
-    modal.classList.remove('active');
-    document.body.style.overflow = '';
-}
-
-// ============================================
 // COOKIE BANNER (GDPR)
 // Shown only if HAS_TRACKING_SCRIPTS is true AND no choice persisted yet.
 // "Manage cookies" footer link always re-opens the banner regardless.
@@ -401,8 +340,6 @@ if (window.location.hostname === 'localhost' || window.location.hostname === '12
             applyTranslations();
             updateLanguageButton();
         },
-        showPwaSoonModal: openPwaSoonModal,
-        closePwaSoonModal: closePwaSoonModal,
         showCookieBanner: showCookieBanner,
         hideCookieBanner: hideCookieBanner,
         clearConsent: function() { localStorage.removeItem(CONSENT_KEY); }

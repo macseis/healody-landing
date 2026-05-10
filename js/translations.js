@@ -17,9 +17,9 @@ const translations = {
         hero: {
             badge: "Due modi per ritrovare il benessere",
             headline: "Frequenze terapeutiche, in due forme",
-            subheadline: "Scarica i nostri Pack audio standalone in alta qualità e usali subito sul tuo dispositivo. Oppure aspetta l'arrivo della PWA Healody™ per l'esperienza completa: libreria, statistiche e modalità offline.",
+            subheadline: "Scarica i nostri Pack audio standalone in alta qualità e usali subito sul tuo dispositivo. Oppure installa l'App Healody™ per l'esperienza completa: libreria, sessioni guidate e modalità offline.",
             ctaPrimary: "Esplora lo shop",
-            ctaSecondary: "Scopri la PWA"
+            ctaSecondary: "Installa l'App"
         },
 
         // Healody™ Origin Story
@@ -47,10 +47,10 @@ const translations = {
             packTitle: "Pack Audio Standalone",
             packText: "File MP3 in alta qualità, scaricabili sul tuo dispositivo. Mix di frequenze binaurali e polinaurali con ambient sonoro studiato. Pronti all'uso, senza app, senza account.",
             packCta: "Esplora lo shop",
-            pwaBadge: "Coming Soon",
+            pwaBadge: "Disponibile",
             pwaTitle: "App Healody™",
-            pwaText: "L'esperienza completa: libreria estesa di frequenze e protocolli, ascolto offline, statistiche personali e installazione come app sul tuo dispositivo. In arrivo.",
-            pwaCta: "Scopri la PWA"
+            pwaText: "L'esperienza completa: libreria estesa di frequenze e protocolli, ascolto offline e installazione come app sul tuo dispositivo.",
+            pwaCta: "Installa l'App"
         },
 
         // Shop (catalogo dinamico + checkout/codice)
@@ -162,13 +162,13 @@ const translations = {
             disclaimer: "Le frequenze audio sono un supporto al benessere, non sostituiscono cure mediche professionali."
         },
 
-        // PWA Coming Soon Section
+        // PWA Section (Available)
         pwa: {
-            badge: "Coming Soon",
+            badge: "Disponibile",
             headline: "L'App Healody™",
-            subtitle: "L'esperienza completa, in arrivo nelle prossime settimane",
+            subtitle: "L'esperienza completa, già disponibile su iOS, Android e Desktop",
             intro: "L'App Healody™ è una Progressive Web App: si installa sul tuo dispositivo come un'app nativa, funziona offline e ti dà accesso a tutta la libreria di frequenze e protocolli.",
-            featuresTitle: "Cosa offrirà",
+            featuresTitle: "Cosa offre",
             feat1: {
                 title: "Libreria estesa",
                 description: "Decine di frequenze dirette, binaurali, polinaurali e protocolli sequenziali. Ogni contenuto studiato per uno scopo specifico."
@@ -181,11 +181,7 @@ const translations = {
                 title: "Funziona offline",
                 description: "Una volta installata e sincronizzata, l'App funziona anche senza connessione. Rilassati ovunque."
             },
-            feat4: {
-                title: "Statistiche personali",
-                description: "Cronologia ascolti, sessioni, progressi nel tempo. Per capire cosa funziona meglio per te."
-            },
-            howTitle: "Come funzionerà",
+            howTitle: "Come funziona",
             step1Title: "Installa e attiva",
             step1Desc: "Inserisci il tuo codice licenza e crea il tuo account in pochi secondi.",
             step2Title: "Scegli la frequenza",
@@ -193,7 +189,7 @@ const translations = {
             step3Title: "Rilassati",
             step3Desc: "Indossa le cuffie, premi play e lasciati guidare dal suono terapeutico.",
             installCta: "Installa l'App",
-            installNote: "Disponibile a breve per iOS, Android e Desktop"
+            installNote: "Disponibile per iOS, Android e Desktop"
         },
 
         // Benefits
@@ -217,15 +213,15 @@ const translations = {
             },
             q2: {
                 question: "Qual è la differenza tra Pack Standalone e App?",
-                answer: "I Pack Standalone sono file MP3 che acquisti una volta e scarichi sul tuo dispositivo: nessuna app, nessun account, riproduci con qualsiasi player. L'App Healody™ (in arrivo) sarà invece l'esperienza completa con libreria estesa, statistiche, modalità offline e installazione come app nativa. La scienza e la qualità audio sono le stesse."
+                answer: "I Pack Standalone sono file MP3 che acquisti una volta e scarichi sul tuo dispositivo: nessuna app, nessun account, riproduci con qualsiasi player. L'App Healody™ è invece l'esperienza completa con libreria estesa, modalità offline e installazione come app nativa sul dispositivo. La scienza e la qualità audio sono le stesse."
             },
             q3: {
                 question: "Cosa contiene esattamente un Pack?",
                 answer: "Ogni Pack è un file MP3 a 320 kbps, mixato e normalizzato a -18 LUFS integrato (-1 dBFS true peak). Contiene un mix di frequenze binaurali e polinaurali sovrapposte a un ambient sonoro studiato per amplificarne l'effetto. È un loop continuo, senza interruzioni."
             },
             q4: {
-                question: "Quando esce l'App Healody™?",
-                answer: "L'App è in fase di testing finale e sarà disponibile nelle prossime settimane. Nel frattempo i Pack Standalone ti danno accesso immediato all'esperienza Healody™ senza dover aspettare."
+                question: "Come installo l'App Healody™?",
+                answer: "Apri https://app.healody.com dal tuo dispositivo (iOS, Android o Desktop) e usa l'opzione \"Aggiungi a Home\" / \"Installa\" del tuo browser. L'App si comporta esattamente come un'app nativa: si avvia da icona, funziona offline una volta sincronizzata e non occupa lo spazio di un'app dello store."
             },
             q5: {
                 question: "Devo usare le cuffie?",
@@ -252,9 +248,9 @@ const translations = {
         // Final CTA
         finalCta: {
             headline: "Inizia oggi il tuo percorso",
-            subheadline: "Scarica un Pack adesso o aspetta l'arrivo dell'App. Scegli tu.",
+            subheadline: "Scarica un Pack o installa l'App. Scegli tu.",
             ctaPack: "Esplora lo shop",
-            ctaPwa: "Scopri la PWA"
+            ctaPwa: "Installa l'App"
         },
 
         // Footer
@@ -266,14 +262,6 @@ const translations = {
             contact: "Contatti",
             manageCookies: "Gestisci cookie",
             copyright: "© 2026 Healody™ · Un prodotto di Protocollo Salute™. Tutti i diritti riservati."
-        },
-
-        // PWA Notify Modal
-        modal: {
-            title: "App Healody™ — In arrivo",
-            text: "L'App Healody™ è in fase di testing finale e sarà disponibile nelle prossime settimane. Nel frattempo puoi già scaricare i Pack Standalone e iniziare subito.",
-            ctaPack: "Vai allo shop",
-            cancel: "Chiudi"
         },
 
         // Cookie banner (GDPR)
@@ -300,9 +288,9 @@ const translations = {
         hero: {
             badge: "Two ways to find your wellbeing",
             headline: "Therapeutic frequencies, in two forms",
-            subheadline: "Download our standalone audio Packs in high quality and use them right away on any device. Or wait for the Healody™ PWA for the complete experience: full library, listening stats, and offline mode.",
+            subheadline: "Download our standalone audio Packs in high quality and use them right away on any device. Or install the Healody™ App for the complete experience: full library, guided sessions, and offline mode.",
             ctaPrimary: "Explore the shop",
-            ctaSecondary: "Discover the PWA"
+            ctaSecondary: "Install the App"
         },
 
         // Healody™ Origin Story
@@ -330,10 +318,10 @@ const translations = {
             packTitle: "Standalone Audio Packs",
             packText: "High-quality MP3 files you download to your device. A mix of binaural and polynaural frequencies layered with carefully designed ambient sound. Ready to use — no app, no account.",
             packCta: "Explore the shop",
-            pwaBadge: "Coming Soon",
+            pwaBadge: "Available",
             pwaTitle: "Healody™ App",
-            pwaText: "The full experience: extended library of frequencies and protocols, offline listening, personal stats, and installation as a native app on your device. Coming soon.",
-            pwaCta: "Discover the PWA"
+            pwaText: "The full experience: extended library of frequencies and protocols, offline listening, and installation as a native app on your device.",
+            pwaCta: "Install the App"
         },
 
 
@@ -446,13 +434,13 @@ const translations = {
             disclaimer: "Audio frequencies are a wellness support tool, not a replacement for professional medical care."
         },
 
-        // PWA Coming Soon Section
+        // PWA Section (Available)
         pwa: {
-            badge: "Coming Soon",
+            badge: "Available",
             headline: "The Healody™ App",
-            subtitle: "The complete experience, coming in the next few weeks",
+            subtitle: "The complete experience, available now on iOS, Android, and Desktop",
             intro: "The Healody™ App is a Progressive Web App: it installs on your device like a native app, works offline, and gives you access to the entire library of frequencies and protocols.",
-            featuresTitle: "What it will offer",
+            featuresTitle: "What it offers",
             feat1: {
                 title: "Extended library",
                 description: "Dozens of direct, binaural, polynaural frequencies and sequential protocols. Each one designed for a specific purpose."
@@ -465,11 +453,7 @@ const translations = {
                 title: "Works offline",
                 description: "Once installed and synced, the App works without internet. Relax anytime, anywhere."
             },
-            feat4: {
-                title: "Personal stats",
-                description: "Listening history, sessions, progress over time. To understand what works best for you."
-            },
-            howTitle: "How it will work",
+            howTitle: "How it works",
             step1Title: "Install and activate",
             step1Desc: "Enter your license code and create your account in seconds.",
             step2Title: "Choose a frequency",
@@ -477,7 +461,7 @@ const translations = {
             step3Title: "Relax",
             step3Desc: "Put on your headphones, hit play, and let the therapeutic sound guide you.",
             installCta: "Install the App",
-            installNote: "Coming soon for iOS, Android, and Desktop"
+            installNote: "Available for iOS, Android, and Desktop"
         },
 
         // Benefits
@@ -501,15 +485,15 @@ const translations = {
             },
             q2: {
                 question: "What's the difference between Standalone Packs and the App?",
-                answer: "Standalone Packs are MP3 files you buy once and download to your device: no app, no account, plays in any audio player. The Healody™ App (coming soon) is the full experience with extended library, listening stats, offline mode, and native app installation. The science and audio quality are identical."
+                answer: "Standalone Packs are MP3 files you buy once and download to your device: no app, no account, plays in any audio player. The Healody™ App is the full experience with extended library, offline mode, and native-like installation on your device. The science and audio quality are identical."
             },
             q3: {
                 question: "What exactly does a Pack contain?",
                 answer: "Each Pack is a 320 kbps MP3 file, mixed and normalized to -18 LUFS integrated (-1 dBFS true peak). It contains a mix of binaural and polynaural frequencies layered over carefully designed ambient sound. It's a continuous loop with no interruptions."
             },
             q4: {
-                question: "When will the Healody™ App be released?",
-                answer: "The App is in final testing and will be available in the next few weeks. Meanwhile, the Standalone Packs give you immediate access to the Healody™ experience without waiting."
+                question: "How do I install the Healody™ App?",
+                answer: "Open https://app.healody.com on your device (iOS, Android, or Desktop) and use your browser's \"Add to Home Screen\" / \"Install\" option. The App behaves just like a native app: it launches from its own icon, works offline once synced, and doesn't take the disk space of a store-bought app."
             },
             q5: {
                 question: "Do I need headphones?",
@@ -536,9 +520,9 @@ const translations = {
         // Final CTA
         finalCta: {
             headline: "Start your journey today",
-            subheadline: "Download a Pack now or wait for the App launch. Your call.",
+            subheadline: "Download a Pack or install the App. Your call.",
             ctaPack: "Explore the shop",
-            ctaPwa: "Discover the PWA"
+            ctaPwa: "Install the App"
         },
 
         // Footer
@@ -550,14 +534,6 @@ const translations = {
             contact: "Contact",
             manageCookies: "Manage cookies",
             copyright: "© 2026 Healody™ · A product of Protocollo Salute™. All rights reserved."
-        },
-
-        // PWA Notify Modal
-        modal: {
-            title: "Healody™ App — Coming soon",
-            text: "The Healody™ App is in final testing and will be available in the next few weeks. Meanwhile, you can already download the Standalone Packs and start right away.",
-            ctaPack: "Go to shop",
-            cancel: "Close"
         },
 
         // Cookie banner (GDPR)

@@ -1851,7 +1851,7 @@ section {
 }
 
 /* ============================================
-   PWA SECTION (Coming Soon)
+   PWA SECTION (Available)
    ============================================ */
 .pwa-section {
     padding: var(--spacing-24) 0;
@@ -2002,7 +2002,7 @@ section {
 }
 
 /* ============================================
-   MODAL: PWA Coming Soon
+   MODAL: shared base styles (used by shop redeem modal)
    ============================================ */
 .modal-text {
     font-size: var(--text-base);
