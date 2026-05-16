@@ -3,22 +3,21 @@
  * Handles caching and offline functionality
  */
 
-const CACHE_NAME = 'Healody-landing-v11';
+const CACHE_NAME = 'Healody-landing-v18';
 const RUNTIME_CACHE = 'Healody-runtime';
 
-// Assets to cache on install
+// Assets to cache on install (paths relative to the SW scope, so they work
+// both in dev under /healody-repos/healody-landing/ and in prod under /)
 const STATIC_ASSETS = [
-    '/',
-    '/index.html',
-    '/manifest.json',
-    '/css/styles.css',
-    '/css/shop.css',
-    '/js/main.js',
-    '/js/translations.js',
-    '/js/shop.js',
-    '/images/logo-full.svg',
-    '/images/logo-icon.svg',
-    '/images/favicon.svg'
+    './',
+    'index.html',
+    'manifest.json',
+    'css/styles.css',
+    'js/main.js',
+    'js/translations.js',
+    'images/logo-full.svg',
+    'images/logo-icon.svg',
+    'images/favicon.svg'
 ];
 
 // Install event - cache static assets

@@ -7,19 +7,19 @@ const translations = {
     it: {
         // Navigation
         nav: {
-            shop: "Shop",
-            pwa: "App",
+            pwa: "L'App",
+            plans: "Piani",
             science: "Scienza",
             faq: "FAQ"
         },
 
         // Hero Section
         hero: {
-            badge: "Due modi per ritrovare il benessere",
-            headline: "Frequenze terapeutiche, in due forme",
-            subheadline: "Scarica i nostri Pack audio standalone in alta qualità e usali subito sul tuo dispositivo. Oppure installa l'App Healody™ per l'esperienza completa: libreria, sessioni guidate e modalità offline.",
-            ctaPrimary: "Esplora lo shop",
-            ctaSecondary: "Installa l'App"
+            badge: "Wellness audio guidato",
+            headline: "Il suono che cambia il tuo stato",
+            subheadline: "Il tuo sistema nervoso risponde alle frequenze audio sempre, anche quando non ci fai caso. Healody™ usa questa risposta in modo intenzionale: frequenze binaurali, toni armonici e suoni naturali selezionati per guidarti verso lo stato che ti serve — sonno profondo, focus sostenuto, calma reale, recupero fisico.",
+            ctaPrimary: "Prova gratis",
+            ctaNote: "Disponibile su iOS, Android e Desktop. Niente app store."
         },
 
         // Healody™ Origin Story
@@ -36,77 +36,7 @@ const translations = {
             solutionLabel: "Soluzione",
             solutionHeadline: "Il tuo angolo di benessere",
             solutionText: "Healody™ utilizza frequenze audio terapeutiche scientificamente provate per riportare equilibrio nella tua vita.",
-            ctaDiscover: "Scopri Healody™"
-        },
-
-        // Two Products Overview
-        products: {
-            headline: "Due modi di vivere Healody™",
-            subtitle: "Scegli il formato che preferisci. La scienza dietro è la stessa.",
-            packBadge: "Disponibile",
-            packTitle: "Pack Audio Standalone",
-            packText: "File MP3 in alta qualità, scaricabili sul tuo dispositivo. Mix di frequenze binaurali e polinaurali con ambient sonoro studiato. Pronti all'uso, senza app, senza account.",
-            packCta: "Esplora lo shop",
-            pwaBadge: "Disponibile",
-            pwaTitle: "App Healody™",
-            pwaText: "L'esperienza completa: libreria estesa di frequenze e protocolli, ascolto offline e installazione come app sul tuo dispositivo.",
-            pwaCta: "Installa l'App"
-        },
-
-        // Shop (catalogo dinamico + checkout/codice)
-        shop: {
-            eyebrow: "Shop",
-            headline: "Healody™ Shop — Pack audio professionali",
-            subtitle: "Acquista con carta o riscatta un codice licenza. Download immediato via email.",
-            loading: "Carico il catalogo…",
-            empty: "Nessun pack disponibile al momento. Torna a trovarci presto.",
-            errorLoad: "Impossibile caricare il catalogo. Riprova tra qualche istante.",
-            errorCheckout: "Errore nell'avvio del checkout. Riprova tra qualche istante.",
-            errorNetwork: "Connessione assente o server non raggiungibile. Riprova tra qualche istante.",
-            errorGeneric: "Si è verificato un errore. Riprova.",
-            disclaimer: "Inserendo l'email accetti che venga utilizzata per inviare il link di download, secondo la nostra Privacy Policy.",
-            path: {
-                stripeTitle: "Compra con carta",
-                stripeDesc: "Pagamento sicuro via Stripe. Ricevi link di download per email entro pochi secondi.",
-                codeTitle: "Hai un codice?",
-                codeDesc: "Riscatta una licenza già attivata e ottieni subito il link al download."
-            },
-            action: {
-                buy: "💳 Compra",
-                redeem: "🎟 Codice"
-            },
-            card: {
-                readMore: "leggi di più"
-            },
-            redeem: {
-                title: "Riscatta il tuo codice",
-                emailLabel: "Email",
-                codeLabel: "Codice licenza",
-                codeHint: "Formato: XXXX-XXXX-XXXX-XXXX. Premi Verifica per controllare i riscatti disponibili.",
-                cancel: "Annulla",
-                verify: "Verifica",
-                submit: "Riscatta",
-                errorEmail: "Inserisci un indirizzo email valido.",
-                errorCodeFormat: "Codice licenza non valido (formato XXXX-XXXX-XXXX-XXXX).",
-                errorVerifyGeneric: "Impossibile verificare il codice. Riprova.",
-                verifyOk: "Hai ancora {n} di {total} riscatti su questo codice.",
-                verifyExhausted: "Licenza esaurita: 0 di {total} riscatti disponibili."
-            },
-            errorCode: {
-                invalid_format: "Codice licenza non valido (formato XXXX-XXXX-XXXX-XXXX).",
-                license_not_found: "Codice licenza non trovato.",
-                license_inactive: "Licenza non attiva.",
-                license_expired: "Licenza scaduta.",
-                license_exhausted: "Licenza esaurita: nessun riscatto disponibile.",
-                email_mismatch: "Email non corrisponde a quella della licenza.",
-                invalid_email: "Email non valida.",
-                invalid_pack: "Pack non valido.",
-                pack_unavailable: "Pack non disponibile.",
-                pack_no_render: "Pack non ancora pronto al download.",
-                race_condition: "Riprova: un'altra richiesta sta usando lo stesso credito.",
-                internal_error: "Errore interno. Riprova più tardi.",
-                method_not_allowed: "Metodo non consentito."
-            }
+            ctaDiscover: "Scopri come funziona"
         },
 
         // Categories
@@ -162,40 +92,110 @@ const translations = {
             disclaimer: "Le frequenze audio sono un supporto al benessere, non sostituiscono cure mediche professionali."
         },
 
-        // PWA Section (Available)
+        // PWA Section
         pwa: {
-            badge: "Disponibile",
+            badge: "Disponibile su iOS, Android e Desktop",
             headline: "L'App Healody™",
-            subtitle: "L'esperienza completa, già disponibile su iOS, Android e Desktop",
-            intro: "L'App Healody™ è una Progressive Web App: si installa sul tuo dispositivo come un'app nativa, funziona offline e ti dà accesso a tutta la libreria di frequenze e protocolli.",
-            featuresTitle: "Cosa offre",
+            subtitle: "Frequenze, ambient e protocolli in un'app sola. Scegli, ascolta, anche offline.",
+            intro: "Healody è una Progressive Web App: si installa dal browser sul tuo dispositivo, funziona come un'app nativa, non passa per app store. In pochi secondi è pronta.",
+            featuresTitle: "Cosa puoi fare",
             feat1: {
-                title: "Libreria estesa",
-                description: "Decine di frequenze dirette, binaurali, polinaurali e protocolli sequenziali. Ogni contenuto studiato per uno scopo specifico."
+                title: "Libreria viva",
+                description: "Frequenze pure, binaurali, polinaurali. Ambient della natura. Protocolli strutturati per obiettivo. Una libreria in continua espansione."
             },
             feat2: {
-                title: "Audio protetti",
-                description: "Contenuti cifrati con AES-256. La tua esperienza di benessere è completamente privata e sicura."
+                title: "Frequenza + Ambient insieme",
+                description: "Con Premium ed Elite ascolti una frequenza miscelata a un ambient naturale. Pioggia + 432 Hz, foresta + 528 Hz: scegli la combinazione che funziona per te."
             },
             feat3: {
                 title: "Funziona offline",
-                description: "Una volta installata e sincronizzata, l'App funziona anche senza connessione. Rilassati ovunque."
+                description: "Una volta scaricato, il contenuto è ascoltabile senza connessione. Le tue sessioni viaggiano con te."
             },
+            feat4: {
+                title: "Pack confezionati Healody",
+                description: "Combinazioni già pronte di frequenza + ambient, curate dal nostro team. Acquisto una tantum, restano tuoi per sempre."
+            },
+            eliteEyebrow: "Per chi vuole di più",
+            eliteTitle: "Healody Elite",
+            eliteText: "Elite include funzionalità uniche, riservate ai membri. Scarica l'app per scoprirle — non puoi raccontarle con uno screenshot.",
             howTitle: "Come funziona",
-            step1Title: "Installa e attiva",
-            step1Desc: "Inserisci il tuo codice licenza e crea il tuo account in pochi secondi.",
-            step2Title: "Scegli la frequenza",
-            step2Desc: "Seleziona la frequenza o il protocollo adatto al tuo stato d'animo o obiettivo.",
+            step1Title: "Installa e registrati",
+            step1Desc: "Apri l'app dal browser, aggiungi a Home, crea il tuo account gratuito.",
+            step2Title: "Scegli il contenuto",
+            step2Desc: "Una frequenza, un ambient, un protocollo o un pack confezionato. Dal market o dalla tua libreria.",
             step3Title: "Rilassati",
-            step3Desc: "Indossa le cuffie, premi play e lasciati guidare dal suono terapeutico.",
-            installCta: "Installa l'App",
-            installNote: "Disponibile per iOS, Android e Desktop"
+            step3Desc: "Cuffie, play, lasciati guidare.",
+            installCta: "Prova gratis",
+            installNote: "Niente app store. Si installa direttamente dal browser."
+        },
+
+        // Plans
+        plans: {
+            headline: "I tre piani Healody™",
+            subtitle: "Parti da gratis, sali quando ti serve, scendi se vuoi. I tuoi contenuti restano sempre con te.",
+            cta: "Prova gratis",
+            ctaNote: "Parti da Free, decidi quando passare a Premium o Elite dall'app.",
+            free: {
+                name: "Free",
+                price: "Gratis",
+                period: "per sempre",
+                tagline: "Prova reale, senza scadenza.",
+                feat1: "Frequenza base 128 Hz inclusa",
+                feat2: "3 minuti per sessione",
+                feat3: "Esplora liberamente il market",
+                feat4: "I tuoi eventuali acquisti restano tuoi"
+            },
+            premium: {
+                badge: "Più scelto",
+                name: "Premium",
+                price: "€4,99",
+                period: "al mese",
+                yearly: "o €33,99/anno",
+                tagline: "L'esperienza completa, ascolto senza limiti.",
+                feat1: "Ascolto illimitato per sessione",
+                feat2: "10 frequenze + 5 ambient + 5 protocolli a scelta dal market",
+                feat3: "Frequenza + ambient miscelati durante l'ascolto",
+                feat4: "Acquisti extra da €0,99",
+                feat5: "Ricevi e ascolti blend condivisi dai membri Elite"
+            },
+            elite: {
+                name: "Elite",
+                price: "€7,99",
+                period: "al mese",
+                yearly: "o €48,99/anno",
+                tagline: "Tutto di Premium, più ciò che si scopre dentro.",
+                feat1: "Tutto ciò che ha Premium",
+                feat2: "30 frequenze + 15 ambient + 10 protocolli a scelta dal market",
+                feat3: "+ funzionalità uniche, riservate ai membri Elite"
+            }
+        },
+
+        // Bonus
+        bonus: {
+            headline: "Come funzionano i bonus",
+            subtitle: "Ogni piano include un certo numero di bonus per tipo: frequenze, ambient, protocolli. Tre contatori indipendenti, non crediti generici.",
+            b1: {
+                title: "Spendi quando vuoi",
+                text: "Niente onboarding \"scegli tutto subito\". Esplori il market e prendi i contenuti quando ti servono. I bonus si scalano solo al momento dell'aggiunta in libreria."
+            },
+            b2: {
+                title: "Upgrade vantaggioso",
+                text: "Passi da Premium a Elite? Il tetto sale, lo storico già consumato resta. Se hai usato 7 frequenze su Premium, ti restano 23 disponibili su Elite."
+            },
+            b3: {
+                title: "Downgrade con scelta",
+                text: "Scendi di piano? Decidi tu quali contenuti tenere attivi. Quelli che escono vanno in stand-by, non si perdono. Al prossimo upgrade tornano disponibili."
+            },
+            b4: {
+                title: "Sospensione & ripresa",
+                text: "Se l'abbonamento si ferma per qualche tempo, i contenuti e i bonus restano congelati. Al rinnovo, ritrovi tutto come l'avevi lasciato."
+            }
         },
 
         // Benefits
         benefits: {
             headline: "I Benefici delle Frequenze Healody™",
-            subtitle: "Pack o App, gli effetti dell'ascolto sono gli stessi",
+            subtitle: "Cosa cambia, sessione dopo sessione, ascoltando con costanza",
             benefit1: "Riduce stress e ansia",
             benefit2: "Migliora concentrazione e focus",
             benefit3: "Favorisce sonno profondo e ristoratore",
@@ -208,49 +208,56 @@ const translations = {
         faq: {
             headline: "Domande Frequenti",
             q1: {
-                question: "Cos'è una frequenza terapeutica?",
-                answer: "Le frequenze terapeutiche sono onde sonore specifiche che interagiscono con le onde cerebrali per promuovere stati di rilassamento, concentrazione o benessere. Ogni frequenza ha uno scopo specifico supportato dalla ricerca scientifica."
+                question: "Cos'è Healody?",
+                answer: "Healody™ è una Progressive Web App (PWA) che usa frequenze terapeutiche per guidare il tuo sistema nervoso verso stati funzionali specifici: sonno profondo, focus sostenuto, calma reale, recupero fisico, creatività. Si installa direttamente dal browser sul tuo dispositivo (iOS, Android, Desktop), funziona offline e non passa per gli app store. Un prodotto di Protocollo Salute™."
             },
             q2: {
-                question: "Qual è la differenza tra Pack Standalone e App?",
-                answer: "I Pack Standalone sono file MP3 che acquisti una volta e scarichi sul tuo dispositivo: nessuna app, nessun account, riproduci con qualsiasi player. L'App Healody™ è invece l'esperienza completa con libreria estesa, modalità offline e installazione come app nativa sul dispositivo. La scienza e la qualità audio sono le stesse."
+                question: "Cos'è una frequenza terapeutica?",
+                answer: "Le frequenze terapeutiche sono onde sonore specifiche che interagiscono con le onde cerebrali per promuovere stati di rilassamento, concentrazione o benessere. Healody combina frequenze pure, binaurali e polinaurali, ambient della natura e protocolli strutturati: ogni contenuto ha uno scopo specifico supportato dalla ricerca scientifica."
             },
             q3: {
-                question: "Cosa contiene esattamente un Pack?",
-                answer: "Ogni Pack è un file MP3 a 320 kbps, mixato e normalizzato a -18 LUFS integrato (-1 dBFS true peak). Contiene un mix di frequenze binaurali e polinaurali sovrapposte a un ambient sonoro studiato per amplificarne l'effetto. È un loop continuo, senza interruzioni."
+                question: "Quanto costa Healody?",
+                answer: "Hai tre piani. Free è gratis per sempre: include la frequenza base 128 Hz, con 3 minuti per sessione, e accesso al market per esplorare. Premium è €4,99/mese o €33,99/anno (sconto 43%): ascolto illimitato, 10 frequenze + 5 ambient + 5 protocolli a scelta dal market. Elite è €7,99/mese o €48,99/anno (sconto 49%): 30 frequenze + 15 ambient + 10 protocolli, più funzionalità riservate ai membri Elite."
             },
             q4: {
+                question: "Cosa sono i bonus e come funzionano?",
+                answer: "I bonus sono i contenuti inclusi nel tuo piano: tre contatori indipendenti, uno per frequenze, uno per ambient, uno per protocolli. Non sono crediti generici. Li spendi nel tempo dal market, scegliendo i contenuti che ti servono nel momento in cui ti servono — non devi decidere tutto subito. Quando aggiungi un contenuto alla libreria, il contatore del tipo corrispondente scala di uno."
+            },
+            q5: {
+                question: "Posso cambiare piano nel tempo?",
+                answer: "Sì, sempre. Salendo (es. Premium → Elite): il tetto bonus sale e lo storico già consumato resta. Se hai usato 7 frequenze su Premium, su Elite te ne restano 23 disponibili. Scendendo (es. Elite → Premium): scegli tu quali contenuti tenere attivi. Quelli che escono vanno in stand-by, non si perdono. Al prossimo upgrade tornano disponibili."
+            },
+            q6: {
+                question: "Cosa succede se annullo l'abbonamento?",
+                answer: "I tuoi contenuti e bonus restano congelati. Non scompaiono, ma non sono accessibili finché l'abbonamento è inattivo. Al rinnovo ritrovi tutto come l'avevi lasciato. Gli acquisti extra fatti in cash (oltre i bonus) restano comunque ascoltabili anche con piano Free, con il limite di 3 minuti per sessione."
+            },
+            q7: {
+                question: "Cosa sono i Pack confezionati Healody?",
+                answer: "Sono combinazioni già pronte di frequenza + ambient, curate dal nostro team. Acquisto una tantum (a partire da pochi euro), restano tuoi per sempre, sopravvivono anche al downgrade fino a Free. Sono il modo più rapido per provare combinazioni curate senza spendere i tuoi bonus."
+            },
+            q8: {
                 question: "Come installo l'App Healody™?",
                 answer: "Apri https://app.healody.com dal tuo dispositivo (iOS, Android o Desktop) e usa l'opzione \"Aggiungi a Home\" / \"Installa\" del tuo browser. L'App si comporta esattamente come un'app nativa: si avvia da icona, funziona offline una volta sincronizzata e non occupa lo spazio di un'app dello store."
             },
-            q5: {
+            q9: {
                 question: "Devo usare le cuffie?",
                 answer: "Sì, per un'esperienza ottimale consigliamo cuffie di buona qualità. Per le frequenze binaurali le cuffie sono essenziali, perché ogni orecchio deve ricevere una frequenza diversa. Per le polinaurali e l'ambient anche speaker stereo di qualità possono andare bene."
             },
-            q6: {
+            q10: {
                 question: "Posso usarli mentre dormo?",
-                answer: "Assolutamente sì. Lo Sleep Pack e il Recovery Pack sono progettati proprio per accompagnare il sonno, con frequenze delta e theta che favoriscono il riposo profondo. Imposta il loop sul tuo player e lasciati addormentare."
+                answer: "Assolutamente sì. Le frequenze delta e theta favoriscono il riposo profondo: imposta una sessione lunga e lasciati addormentare. Su Premium ed Elite l'ascolto è illimitato e puoi anche miscelare un ambient naturale (es. pioggia o oceano) sopra la frequenza."
             },
-            q7: {
+            q11: {
                 question: "È sicuro?",
                 answer: "Sì, le frequenze audio sono completamente sicure e naturali. Non hanno effetti collaterali e possono essere utilizzate da chiunque. In caso di dubbi o condizioni mediche specifiche, consulta il tuo medico."
-            },
-            q8: {
-                question: "Come acquisto un Pack sullo shop?",
-                answer: "Vai nella sezione Shop, scegli il pack che ti interessa e clicca \"Compra con carta\". Verrai reindirizzato a Stripe per il pagamento sicuro. Subito dopo il pagamento riceverai una email con il link di download del file MP3, valido 72 ore e fino a 5 download. La pagina di conferma mostra anche il link cliccabile per scaricare subito."
-            },
-            q9: {
-                question: "Ho un codice licenza, come lo uso?",
-                answer: "Nello shop, sul pack che vuoi scaricare, clicca \"Codice\". Si apre un modulo: inserisci la tua email, incolla il codice (formato XXXX-XXXX-XXXX-XXXX) e premi \"Verifica\" per controllare quanti riscatti hai ancora. Se la verifica è OK, premi \"Riscatta\" e riceverai email + link di download. Ogni riscatto consuma un credito del codice e crea un nuovo link valido 72 ore con max 5 download."
             }
         },
 
         // Final CTA
         finalCta: {
             headline: "Inizia oggi il tuo percorso",
-            subheadline: "Scarica un Pack o installa l'App. Scegli tu.",
-            ctaPack: "Esplora lo shop",
-            ctaPwa: "Installa l'App"
+            subheadline: "Apri l'app, ascolta 128 Hz gratis, decidi tu se passare a Premium o Elite.",
+            ctaPack: "Prova gratis"
         },
 
         // Footer
@@ -278,19 +285,19 @@ const translations = {
     en: {
         // Navigation
         nav: {
-            shop: "Shop",
-            pwa: "App",
+            pwa: "The App",
+            plans: "Plans",
             science: "Science",
             faq: "FAQ"
         },
 
         // Hero Section
         hero: {
-            badge: "Two ways to find your wellbeing",
-            headline: "Therapeutic frequencies, in two forms",
-            subheadline: "Download our standalone audio Packs in high quality and use them right away on any device. Or install the Healody™ App for the complete experience: full library, guided sessions, and offline mode.",
-            ctaPrimary: "Explore the shop",
-            ctaSecondary: "Install the App"
+            badge: "Guided audio wellness",
+            headline: "Sound that shifts your state.",
+            subheadline: "Your nervous system responds to audio frequencies — always, even when you don't notice. Healody™ uses that response intentionally: binaural frequencies, harmonic tones and natural soundscapes selected to guide you toward the state you need — deep sleep, sustained focus, real calm, physical recovery.",
+            ctaPrimary: "Try free",
+            ctaNote: "Available on iOS, Android and Desktop. No app store."
         },
 
         // Healody™ Origin Story
@@ -307,78 +314,7 @@ const translations = {
             solutionLabel: "Solution",
             solutionHeadline: "Your Wellness Corner",
             solutionText: "Healody™ uses scientifically proven therapeutic audio frequencies to bring balance back to your life.",
-            ctaDiscover: "Discover Healody™"
-        },
-
-        // Two Products Overview
-        products: {
-            headline: "Two ways to live Healody™",
-            subtitle: "Pick the format you prefer. The science behind is the same.",
-            packBadge: "Available",
-            packTitle: "Standalone Audio Packs",
-            packText: "High-quality MP3 files you download to your device. A mix of binaural and polynaural frequencies layered with carefully designed ambient sound. Ready to use — no app, no account.",
-            packCta: "Explore the shop",
-            pwaBadge: "Available",
-            pwaTitle: "Healody™ App",
-            pwaText: "The full experience: extended library of frequencies and protocols, offline listening, and installation as a native app on your device.",
-            pwaCta: "Install the App"
-        },
-
-
-        // Shop (dynamic catalog + checkout/code)
-        shop: {
-            eyebrow: "Shop",
-            headline: "Healody™ Shop — Professional audio packs",
-            subtitle: "Buy with card or redeem a license code. Instant download via email.",
-            loading: "Loading the catalog…",
-            empty: "No packs available right now. Come back soon.",
-            errorLoad: "Couldn't load the catalog. Please try again shortly.",
-            errorCheckout: "Could not start checkout. Please try again shortly.",
-            errorNetwork: "No connection or server unreachable. Please try again shortly.",
-            errorGeneric: "Something went wrong. Please try again.",
-            disclaimer: "By entering your email you agree it will be used to send the download link and purchase receipts, per our Privacy Policy.",
-            path: {
-                stripeTitle: "Buy with card",
-                stripeDesc: "Secure payment via Stripe. Get the download link by email within seconds.",
-                codeTitle: "Got a code?",
-                codeDesc: "Redeem an already-activated license and get the download link right away."
-            },
-            action: {
-                buy: "💳 Buy",
-                redeem: "🎟 Code"
-            },
-            card: {
-                readMore: "read more"
-            },
-            redeem: {
-                title: "Redeem your code",
-                emailLabel: "Email",
-                codeLabel: "License code",
-                codeHint: "Format: XXXX-XXXX-XXXX-XXXX. Click Verify to check available redemptions.",
-                cancel: "Cancel",
-                verify: "Verify",
-                submit: "Redeem",
-                errorEmail: "Please enter a valid email address.",
-                errorCodeFormat: "Invalid license code (format XXXX-XXXX-XXXX-XXXX).",
-                errorVerifyGeneric: "Could not verify the code. Please try again.",
-                verifyOk: "You still have {n} of {total} redemptions left on this code.",
-                verifyExhausted: "License exhausted: 0 of {total} redemptions left."
-            },
-            errorCode: {
-                invalid_format: "Invalid license code (format XXXX-XXXX-XXXX-XXXX).",
-                license_not_found: "License code not found.",
-                license_inactive: "License is not active.",
-                license_expired: "License has expired.",
-                license_exhausted: "License exhausted: no redemptions left.",
-                email_mismatch: "Email does not match the one bound to this license.",
-                invalid_email: "Invalid email address.",
-                invalid_pack: "Invalid pack.",
-                pack_unavailable: "Pack unavailable.",
-                pack_no_render: "Pack not yet ready for download.",
-                race_condition: "Please retry: another request is using the same credit.",
-                internal_error: "Internal error. Please try again later.",
-                method_not_allowed: "Method not allowed."
-            }
+            ctaDiscover: "See how it works"
         },
 
         // Categories
@@ -434,40 +370,110 @@ const translations = {
             disclaimer: "Audio frequencies are a wellness support tool, not a replacement for professional medical care."
         },
 
-        // PWA Section (Available)
+        // PWA Section
         pwa: {
-            badge: "Available",
+            badge: "Available on iOS, Android and Desktop",
             headline: "The Healody™ App",
-            subtitle: "The complete experience, available now on iOS, Android, and Desktop",
-            intro: "The Healody™ App is a Progressive Web App: it installs on your device like a native app, works offline, and gives you access to the entire library of frequencies and protocols.",
-            featuresTitle: "What it offers",
+            subtitle: "Frequencies, ambient and protocols in one app. Pick, play, even offline.",
+            intro: "Healody is a Progressive Web App: it installs from your browser, behaves like a native app, skips the app store. Up and running in seconds.",
+            featuresTitle: "What you can do",
             feat1: {
-                title: "Extended library",
-                description: "Dozens of direct, binaural, polynaural frequencies and sequential protocols. Each one designed for a specific purpose."
+                title: "A living library",
+                description: "Pure, binaural and polynaural frequencies. Natural ambients. Structured protocols. A library that keeps growing."
             },
             feat2: {
-                title: "Protected audio",
-                description: "Content encrypted with AES-256. Your wellness experience is completely private and secure."
+                title: "Frequency + Ambient together",
+                description: "With Premium and Elite you mix a frequency with a natural ambient. Rain + 432 Hz, forest + 528 Hz: pick the combination that works for you."
             },
             feat3: {
                 title: "Works offline",
-                description: "Once installed and synced, the App works without internet. Relax anytime, anywhere."
+                description: "Once downloaded, your content plays without connection. Your sessions travel with you."
             },
+            feat4: {
+                title: "Healody curated packs",
+                description: "Ready-made frequency + ambient combinations, hand-picked by our team. One-time purchase, yours forever."
+            },
+            eliteEyebrow: "For those who want more",
+            eliteTitle: "Healody Elite",
+            eliteText: "Elite unlocks unique features, reserved for members. Install the app to discover them — they don't fit in a screenshot.",
             howTitle: "How it works",
-            step1Title: "Install and activate",
-            step1Desc: "Enter your license code and create your account in seconds.",
-            step2Title: "Choose a frequency",
-            step2Desc: "Pick the frequency or protocol that matches your mood or goal.",
+            step1Title: "Install and register",
+            step1Desc: "Open the app in your browser, Add to Home Screen, create your free account.",
+            step2Title: "Pick what you need",
+            step2Desc: "A frequency, an ambient, a protocol or a curated pack. From the market or your library.",
             step3Title: "Relax",
-            step3Desc: "Put on your headphones, hit play, and let the therapeutic sound guide you.",
-            installCta: "Install the App",
-            installNote: "Available for iOS, Android, and Desktop"
+            step3Desc: "Headphones, play, let it guide you.",
+            installCta: "Try free",
+            installNote: "No app store. Installs straight from the browser."
+        },
+
+        // Plans
+        plans: {
+            headline: "Three Healody™ plans",
+            subtitle: "Start free, move up when you need to, step down anytime. Your content stays with you.",
+            cta: "Try free",
+            ctaNote: "Start on Free, upgrade to Premium or Elite from inside the app.",
+            free: {
+                name: "Free",
+                price: "Free",
+                period: "forever",
+                tagline: "A real trial, no expiry.",
+                feat1: "128 Hz base frequency included",
+                feat2: "3 minutes per session",
+                feat3: "Browse the market freely",
+                feat4: "Any purchases stay yours"
+            },
+            premium: {
+                badge: "Most picked",
+                name: "Premium",
+                price: "€4.99",
+                period: "per month",
+                yearly: "or €33.99/year",
+                tagline: "The full experience, unlimited listening.",
+                feat1: "Unlimited listening per session",
+                feat2: "10 frequencies + 5 ambients + 5 protocols, free pick from the market",
+                feat3: "Frequency + ambient mixed during playback",
+                feat4: "Extra purchases from €0.99",
+                feat5: "Receive and play blends shared by Elite members"
+            },
+            elite: {
+                name: "Elite",
+                price: "€7.99",
+                period: "per month",
+                yearly: "or €48.99/year",
+                tagline: "Everything Premium has, plus what you discover inside.",
+                feat1: "Everything Premium has",
+                feat2: "30 frequencies + 15 ambients + 10 protocols, free pick from the market",
+                feat3: "+ unique features, reserved for Elite members"
+            }
+        },
+
+        // Bonus
+        bonus: {
+            headline: "How bonuses work",
+            subtitle: "Each plan includes a set number of bonuses per type: frequencies, ambients, protocols. Three independent counters — not generic credits.",
+            b1: {
+                title: "Spend when you want",
+                text: "No \"pick everything upfront\" onboarding. Browse the market, grab the content you need when you need it. Bonuses are debited only when you add to your library."
+            },
+            b2: {
+                title: "Upgrade is generous",
+                text: "Moving from Premium to Elite? The cap rises, your past spend stays. If you used 7 frequencies on Premium, 23 remain on Elite."
+            },
+            b3: {
+                title: "Downgrade with choice",
+                text: "Stepping down? You pick what stays active. The rest goes on stand-by — never lost. Next upgrade brings it back."
+            },
+            b4: {
+                title: "Suspension & resume",
+                text: "If your subscription pauses, content and bonuses freeze. On renewal, you find everything exactly as you left it."
+            }
         },
 
         // Benefits
         benefits: {
             headline: "The Benefits of Healody™ Frequencies",
-            subtitle: "Pack or App, the listening effects are the same",
+            subtitle: "What changes, session after session, with consistent listening",
             benefit1: "Reduces stress and anxiety",
             benefit2: "Improves concentration and focus",
             benefit3: "Promotes deep, restorative sleep",
@@ -480,49 +486,56 @@ const translations = {
         faq: {
             headline: "Frequently Asked Questions",
             q1: {
-                question: "What is a therapeutic frequency?",
-                answer: "Therapeutic frequencies are specific sound waves that interact with brainwaves to promote states of relaxation, focus, or wellbeing. Each frequency has a specific purpose supported by scientific research."
+                question: "What is Healody?",
+                answer: "Healody™ is a Progressive Web App (PWA) that uses therapeutic frequencies to guide your nervous system toward specific functional states: deep sleep, sustained focus, real calm, physical recovery, creativity. It installs directly from your browser on your device (iOS, Android, Desktop), works offline and skips the app stores. A product of Protocollo Salute™."
             },
             q2: {
-                question: "What's the difference between Standalone Packs and the App?",
-                answer: "Standalone Packs are MP3 files you buy once and download to your device: no app, no account, plays in any audio player. The Healody™ App is the full experience with extended library, offline mode, and native-like installation on your device. The science and audio quality are identical."
+                question: "What is a therapeutic frequency?",
+                answer: "Therapeutic frequencies are specific sound waves that interact with brainwaves to promote states of relaxation, focus or wellbeing. Healody combines pure, binaural and polynaural frequencies, natural ambients and structured protocols: each piece of content has a specific purpose supported by scientific research."
             },
             q3: {
-                question: "What exactly does a Pack contain?",
-                answer: "Each Pack is a 320 kbps MP3 file, mixed and normalized to -18 LUFS integrated (-1 dBFS true peak). It contains a mix of binaural and polynaural frequencies layered over carefully designed ambient sound. It's a continuous loop with no interruptions."
+                question: "How much does Healody cost?",
+                answer: "There are three plans. Free is free forever: includes the 128 Hz base frequency, 3 minutes per session, and market access to browse. Premium is €4.99/month or €33.99/year (43% off): unlimited listening, 10 frequencies + 5 ambients + 5 protocols of your choice from the market. Elite is €7.99/month or €48.99/year (49% off): 30 frequencies + 15 ambients + 10 protocols, plus features reserved for Elite members."
             },
             q4: {
+                question: "What are bonuses and how do they work?",
+                answer: "Bonuses are the contents included in your plan: three independent counters — one for frequencies, one for ambients, one for protocols. They are not generic credits. You spend them over time from the market, picking what you need when you need it — you don't have to decide everything upfront. When you add content to your library, the matching counter is debited by one."
+            },
+            q5: {
+                question: "Can I change plan over time?",
+                answer: "Yes, anytime. Upgrading (e.g. Premium → Elite): the cap rises and your past spend stays. If you used 7 frequencies on Premium, you have 23 left on Elite. Downgrading (e.g. Elite → Premium): you pick which contents stay active. The rest goes on stand-by — never lost. Next upgrade brings it all back."
+            },
+            q6: {
+                question: "What happens if I cancel my subscription?",
+                answer: "Your content and bonuses freeze. They don't disappear, but they aren't accessible while the subscription is inactive. On renewal you find everything exactly as you left it. Extra cash purchases (beyond bonuses) remain playable even on Free, with the 3-minute-per-session cap."
+            },
+            q7: {
+                question: "What are the Healody curated packs?",
+                answer: "Ready-made frequency + ambient combinations, hand-picked by our team. One-time purchase (starting from a few euros), yours forever, surviving even a downgrade to Free. The fastest way to try curated combinations without spending your bonuses."
+            },
+            q8: {
                 question: "How do I install the Healody™ App?",
                 answer: "Open https://app.healody.com on your device (iOS, Android, or Desktop) and use your browser's \"Add to Home Screen\" / \"Install\" option. The App behaves just like a native app: it launches from its own icon, works offline once synced, and doesn't take the disk space of a store-bought app."
             },
-            q5: {
+            q9: {
                 question: "Do I need headphones?",
                 answer: "Yes, for the optimal experience we recommend good-quality headphones. For binaural frequencies headphones are essential, since each ear must receive a different frequency. For polynaural and ambient, quality stereo speakers can also work."
             },
-            q6: {
+            q10: {
                 question: "Can I use them while sleeping?",
-                answer: "Absolutely. The Sleep Pack and Recovery Pack are designed exactly to accompany sleep, with delta and theta frequencies that promote deep rest. Set your player to loop and let yourself drift off."
+                answer: "Absolutely. Delta and theta frequencies promote deep rest: set a long session and let yourself drift off. On Premium and Elite, listening is unlimited and you can mix a natural ambient (e.g. rain or ocean) over the frequency."
             },
-            q7: {
+            q11: {
                 question: "Is it safe?",
                 answer: "Yes, audio frequencies are completely safe and natural. They have no side effects and can be used by anyone. If in doubt or with specific medical conditions, consult your doctor."
-            },
-            q8: {
-                question: "How do I buy a Pack from the shop?",
-                answer: "Go to the Shop section, pick the pack you want and click \"Buy with card\". You'll be redirected to Stripe for secure payment. Right after payment you'll get an email with the MP3 download link, valid for 72 hours and up to 5 downloads. The confirmation page also shows the clickable download button."
-            },
-            q9: {
-                question: "I have a license code — how do I use it?",
-                answer: "In the shop, on the pack you want to download, click \"Code\". A form opens: enter your email, paste the code (format XXXX-XXXX-XXXX-XXXX) and press \"Verify\" to check how many redemptions are left. If verification passes, press \"Redeem\" and you'll receive email + download link. Each redemption uses one credit on the code and creates a fresh link valid 72 hours with max 5 downloads."
             }
         },
 
         // Final CTA
         finalCta: {
             headline: "Start your journey today",
-            subheadline: "Download a Pack or install the App. Your call.",
-            ctaPack: "Explore the shop",
-            ctaPwa: "Install the App"
+            subheadline: "Open the app, play 128 Hz for free, decide if you want to upgrade to Premium or Elite.",
+            ctaPack: "Try free"
         },
 
         // Footer
